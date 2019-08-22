@@ -18,7 +18,7 @@
 
 .modal__container {
   background-color: #fff;
-  max-width: 500px;
+  max-width:790px;
   max-height: 100vh;
   border-radius: 4px;
   overflow-y: auto;
@@ -29,14 +29,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  background:url('../images/zuck.png') no-repeat;
+  background-size: cover;
+  height: 200px;
 }
 .modal__title {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
+  overflow: hidden;
+  background:url('../images/zuck.png') no-repeat;
+  background-size: cover;
   line-height: 1.25;
-  color: #00449e;
+  color: #fff;
   box-sizing: border-box;
 }
 
@@ -144,28 +151,6 @@
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
-}
-/**************************\
-  Specific Modal Styles
-\**************************/
-
-#spending-modal .modal__header {
-  background:#2FDFBE;
-}
-#social-modal .modal__header {
-  background:#19B3DD;
-}
-#search-modal .modal__header {
-  background:#597DE8;
-}
-#fitness-modal .modal__header {
-  background:#BF4DBB;
-}
-#device-modal .modal__header {
-  background:#EA577F;
-}
-#travel-modal .modal__header {
-  background:#ED9C46;
 }
 
 

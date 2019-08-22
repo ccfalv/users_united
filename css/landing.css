@@ -1,25 +1,197 @@
 
 h1 {
-  font-size: 120px;
-  color:#fff;
+  font-size: 80px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 40px;
   font-weight: bold;
 }
 p {
-  font-size: 40px;
+  font-size: 3rem;
+  font-weight: 300;
+  opacity: .7;
 }
-.hero.container {
-	height: 700px;
-	position: relative;
-	overflow: hidden;
-  background:#3C5A99 url('../images/zuck.png') repeat;
-  background-color: rgba(255,255,255.5);
-  color:#fff;
+button {
+  background: #353AC7;
+}
+button.inactive {
+  background: #ddd;
+}
+.logo {
+  background: #eee;
 }
 .header {
   background: #fff;
+  border-bottom:1px solid #eee;
+}
+.header .menu {
+  border-left: 1px solid #eee;
+}
+.header .user-num {
+  display: inline;
+}
+.header span {
+  line-height: 44px;
+}
+.header button {
+  margin-bottom: 0;
+  padding-right:40px;
+  padding-left: 40px;
+}
+.menu ul { 
+  display:flex;
+  margin:0;
 }
 .menu  ul li {
   text-align: right;
-  display: inline-block;
+  list-style: none;
+  padding: 0 0 0 40px;
+  margin-bottom: 0;
 }
+.menu a {
+  color:#000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-style: 1em;
+  opacity: .5;
+  font-size:14px;
+}
+.menu a:hover {
+  opacity: 1;
+}
+.hero  {
+	position: relative;
+  padding:100px 100px;
+	overflow: hidden;
+  background:url('../images/zuck.png') no-repeat;
+  background-size: cover;
+  color:#fff;
+  display: none;
+}
+.how-it-works {
+  padding: 100px;
+  color:#080d19;
+  position: relative;
+  overflow: hidden;
+  background: #ddd;
+  text-align:center;
+  display: none;
+}
+.steps-img {
+  background:url('../images/steps-img.png') no-repeat;
+  background-size: 600px 200px;
+  width: 200px;
+  height:200px;
+  margin:0 auto;
+}
+
+.log {
+  background: #fff;
+}
+.log h2 {
+  color:rgba(0,0,0,.5);
+}
+.user-num {
+   color:#353AC7;
+}
+.user-value {
+   color:#353AC7;
+}
+.log .ledger {
+  background: #eee;
+}
+.log td:first-child {
+  padding-left: 40px;
+}
+.log td:last-child {
+  padding-right: 40px;
+}
+.log span {
+  font-size:18px;
+  line-height: 24px;
+}
+.log label {
+  margin:0;
+}
+.log strong {
+  display: block;
+}
+.cta {
+  position: relative;
+  padding:100px;
+  overflow: hidden;
+  background:url('../images/zuck.png') no-repeat;
+  background-size: cover;
+  color:#fff;
+  text-align:center;
+  display: none;
+}
+.transaction-log {
+  margin:20px 0 0 16px;
+}
+.transaction-log li {
+  list-style: none;
+  width: 90%;
+  border-bottom:1px solid #ccc;
+  border-left:1px dashed #000;
+  padding:30px 0;
+  margin:1px 0;
+  display: inline-flex;
+}
+.transaction-log li:hover {
+  background: linear-gradient(45deg,rgba(255,255,255,0), rgba(255,255,255,.7));
+  cursor: pointer;
+}
+.transaction-log li:nth-child(1) {
+  padding-top:0;
+  margin-top:30px;
+}
+.transaction-log li:nth-child(1):hover {
+  background: inherit;
+}
+.transaction-log li:last-child {
+  border-bottom:none;
+}
+.avatar {
+  position: relative;
+  height:28px;
+  width: 89px;
+  margin-left:-16px;
+}
+.avatar-placeholder {
+  background:url('../images/avatar-placeholder.png') no-repeat;
+  background-size:48px 48px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border:4px solid #353AC7;
+}
+.transaction-content {
+  padding:0 0 0 40px;
+  margin-top:-10px;
+  width: 80%;
+}
+.transaction-content span {
+  line-height: 10px;
+  font-size:20px;
+}
+#circle-container {
+  position: relative;
+  margin: 30px auto 0;
+  width:124px;
+  height: 124px;
+}
+#circle-container strong {
+    position: absolute;
+    top: 90px;
+    left:30px;
+    width: 100%;
+    text-align: center;
+    line-height: 0px;
+    font-size: 30px;
+    color:#000;
+    font-family: 'Michroma', sans-serif;
+}
+
 
