@@ -13,7 +13,7 @@ window.onload = function() {
     emptyFill:"#eee",
     fill: "#353AC7"
   }).on('circle-animation-progress', function(event, progress, stepValue) {
-    $(this).find('strong').text('$' + stepValue.toFixed(2).substr(2));
+    $(this).find('strong').text(stepValue.toFixed(2).substr(2));
   });
   })(jQuery);
   $(".account-tile").on({

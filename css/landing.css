@@ -10,7 +10,6 @@ h2 {
 p {
   font-size: 3rem;
   font-weight: 300;
-  opacity: .7;
 }
 button {
   background: #353AC7;
@@ -27,6 +26,12 @@ button.inactive {
 }
 .header .menu {
   border-left: 1px solid #eee;
+  padding-left: 40px;
+}
+.campaign-title {
+  font-size: 18px;
+  font-weight: 600;
+  color:#353AC7;
 }
 .header .user-num {
   display: inline;
