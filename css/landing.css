@@ -12,10 +12,10 @@ p {
   font-weight: 300;
 }
 button {
-  background: #353AC7;
+  background: #000;
 }
 button.inactive {
-  background: #ddd;
+  background: rgba(0,0,0,.4);
 }
 .logo {
   background: #eee;
@@ -41,8 +41,11 @@ button.inactive {
 }
 .header button {
   margin-bottom: 0;
-  padding-right:40px;
-  padding-left: 40px;
+  padding-right:44px;
+  padding-left:44px;
+}
+.uu-logo {
+  text-align: center;
 }
 .menu ul { 
   display:flex;
@@ -90,24 +93,40 @@ button.inactive {
   height:200px;
   margin:0 auto;
 }
-
+.sidebar h5 {
+  text-align: center;
+}
 .log {
   background: #fff;
+  border-right:1px solid #ddd;
 }
 .log h2 {
   color:rgba(0,0,0,.5);
 }
 .user-num {
-   color:#353AC7;
+   color:#333;
+   display: block;
 }
-.user-value {
-   color:#353AC7;
+.user-sum {
+   color:#1877F2;
 }
 .log .ledger {
   background: #eee;
+  min-height: 700px;
+}
+.signup-container {
+  background: #eee;
+  min-height: 700px;
+  padding:40px;
+}
+.ledger tr {
+  display: flex;
 }
 .log td:first-child {
   padding-left: 40px;
+}
+.log td:nth-child(2) {
+  flex-grow: 2;
 }
 .log td:last-child {
   padding-right: 40px;
@@ -118,9 +137,6 @@ button.inactive {
 }
 .log label {
   margin:0;
-}
-.log strong {
-  display: block;
 }
 .cta {
   position: relative;
@@ -158,19 +174,37 @@ button.inactive {
 .transaction-log li:last-child {
   border-bottom:none;
 }
+.campaign-avatar {
+  position: relative;
+  height: 124px;
+  width: 124px;
+  margin:40px auto;
+  border-radius:50%;
+}
 .avatar {
   position: relative;
-  height:28px;
-  width: 89px;
-  margin-left:-16px;
+  height: 44px;
+  width: 44px;
+}
+.campaign-avatar i {
+  font-size: 134px;
+  line-height: 124px;
+  margin-left: -4px;
+  color:#000;
+  opacity: 1;
 }
 .avatar-placeholder {
   background:url('../images/avatar-placeholder.png') no-repeat;
-  background-size:48px 48px;
-  height: 48px;
-  width: 48px;
+  background-size:44px 44px;
+  height: 44px;
+  width: 44px;
   border-radius: 50%;
-  border:4px solid #353AC7;
+}
+.facebook-logo {
+  background:url('../images/fb-logo.png') no-repeat;
+  background-size:124px 124px;
+  height: 124px;
+  width: 124px;
 }
 .transaction-content {
   padding:0 0 0 40px;
@@ -185,7 +219,7 @@ button.inactive {
   position: relative;
   margin: 30px auto 0;
   width:124px;
-  height: 124px;
+  height: 200px;
 }
 #circle-container strong {
     position: absolute;
@@ -198,5 +232,18 @@ button.inactive {
     color:#000;
     font-family: 'Michroma', sans-serif;
 }
+.region-list li {
+  list-style: none;
+  padding: 20px 0px;
+  border-bottom: 1px solid #eee;
+  margin:0 0 0 14%;
+}
+#burst-placeholder {
+  background:url('../images/burst-placeholder.png') no-repeat;
+  background-size: 325px 253px;
+  width: 352px;
+  height:253px;
+  margin:0 auto;
 
+}
 
