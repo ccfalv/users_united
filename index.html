@@ -33,7 +33,33 @@
 
     <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://cdn.jsdelivr.net/gh/nearprotocol/nearlib@0.11.0/dist/nearlib.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="/js/near.js"></script>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: "384002515644565",
+        cookie: true,
+        xfbml: true,
+        version: "v4.0"
+      });
 
+      FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -131,7 +157,7 @@
         </div>
         <div class="columns nine ledger">
           <table class="u-full-width">
-            <tbody>
+            <tbody id="near-tbody">
               <tr>
                 <td><div class="avatar"><div class="avatar-placeholder"></div></div></td>
                 <td><span><label class="user-num">#20324234</label><strong>Dwayne Johnson</strong> is boycotting Facebook until he gets paid his fair share.</span></td>
@@ -219,7 +245,9 @@
           <p>Last year Facebook made $3.2 billion from our personal data. What did we get? A like? Last year Facebook made $3.2 billion</p>
         </main>
         <footer class="modal__footer">
-          <button>Join</button>
+          <button>Join
+            <fb:login-button scope="public_profile,email,user_age_range,user_location,user_friends" />
+          </button>
         </footer>
       </div>
     </div>
