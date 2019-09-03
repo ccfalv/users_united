@@ -1,6 +1,5 @@
 window.onload = function() {
-//tabs 
-var tabs = new Tabby('[data-tabs]');
+
 (function($) {
   $('#circle-container').circleProgress({
     value: 0.34,

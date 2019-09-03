@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="css/landing.css">
   <link rel="stylesheet" href="css/fa.min.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/all.min.css">
 
 
@@ -51,12 +52,29 @@
     <div class="container">
       <div class="row">
         <div class="columns three">
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <ul id="menu">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Info</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+              </ul>
+            </div>
+          </nav>
           <div class="uu-logo">
             <span><strong>USERS</strong>UNITED</span>
           </div>
         </div>
         <div class="menu columns nine">
-          <span>Last year Facebook made $3.2 billion from our personal data. What did we get? A like?</span>
+          <a class="toggle active" href="#">List</a>
+          <a class="toggle" href="#">Map</a>
           <ul class="u-pull-right">         
             <li>
               <button>Join Boycott</button>
@@ -106,35 +124,17 @@
   <div class="log">
     <div class="container">
       <div class="row">
-        <div class="columns three">
+        <div class="columns three sidebar">
           <div class="campaign-avatar"><div class="facebook-logo"><i class="fa fa-ban"></i></div></div>
-          <ul class="region-list">
-            <li>
-              global
-            </li>
-            <li>
-              north america
-            </li>
-            <li>
-              south america
-            </li>
-            <li>
-              europe
-            </li>
-            <li>
-              africa
-            </li>
-            <li>
-              a
-            </li>
-          </ul>
+          <p><strong>23</strong> Users United boycotting Facebook resulting in  <strong>$123</strong> lost revenue.</p>
+          <canvas id="myChart"></canvas>
         </div>
         <div class="columns nine ledger">
           <table class="u-full-width">
             <tbody>
               <tr>
                 <td><div class="avatar"><div class="avatar-placeholder"></div></div></td>
-                <td><span><label class="user-num">#20</label><strong>Dwayne Johnson</strong> is boycotting Facebook until he gets paid his fair share.</span></td>
+                <td><span><label class="user-num">#20324234</label><strong>Dwayne Johnson</strong> is boycotting Facebook until he gets paid his fair share.</span></td>
                 <td><span class="u-pull-right"><label class="user-num">13</label><strong>Days</strong> </span></td>
                 <td><span class="u-pull-right"><label class="user-sum">$4.35</label><strong>Boycott Value</strong> </span></td>
               </tr>
@@ -233,40 +233,31 @@
   MicroModal.init({
   });
   MicroModal.show('travel-modal');
-  </script>.
-  <script src="/sigma.min.js"></script>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script>
-    // Let's first initialize sigma:
-    var s = new sigma('container');
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
 
-    // Then, let's add some data to display:
-    s.graph.addNode({
-      // Main attributes:
-      id: 'n0',
-      label: 'Hello',
-      // Display attributes:
-      x: 0,
-      y: 0,
-      size: 1,
-      color: '#f00'
-    }).addNode({
-      // Main attributes:
-      id: 'n1',
-      label: 'World !',
-      // Display attributes:
-      x: 1,
-      y: 1,
-      size: 1,
-      color: '#00f'
-    }).addEdge({
-      id: 'e0',
-      // Reference extremities:
-      source: 'n0',
-      target: 'n1'
-    });
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            backgroundColor: 'rgb(24, 119, 242)',
+            borderColor: 'rgb(0, 0, 0)',
+            data: [0, 1, 5, 7, 20, 30, 45]
+        }]
+    },
 
-    // Finally, let's ask our sigma instance to refresh:
-    s.refresh();
+    // Configuration options go here
+    options: {
+      legend: {
+          display: false,
+      }
+    }
+});
   </script>
 
 

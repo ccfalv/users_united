@@ -8,7 +8,7 @@ h2 {
   font-weight: bold;
 }
 p {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
 }
 button {
@@ -23,10 +23,29 @@ button.inactive {
 .header {
   background: #fff;
   border-bottom:1px solid #eee;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.header .three {
+  display: flex;
+  padding:0 20px;
 }
 .header .menu {
   border-left: 1px solid #eee;
   padding-left: 40px;
+}
+.menu a.toggle {
+  margin:10px 10px 10px 0;
+  display: inline-block;
+  color:rgba(0,0,0,.5);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-style: 1em;
+  font-size:14px;
+}
+.menu a.toggle.active { 
+  color:rgba(0,0,0,1);
 }
 .campaign-title {
   font-size: 18px;
@@ -46,6 +65,7 @@ button.inactive {
 }
 .uu-logo {
   text-align: center;
+  flex-grow: 2;
 }
 .menu ul { 
   display:flex;
@@ -56,17 +76,6 @@ button.inactive {
   list-style: none;
   padding: 0 0 0 40px;
   margin-bottom: 0;
-}
-.menu a {
-  color:#000;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-style: 1em;
-  opacity: .5;
-  font-size:14px;
-}
-.menu a:hover {
-  opacity: 1;
 }
 .hero  {
 	position: relative;
@@ -96,23 +105,31 @@ button.inactive {
 .sidebar h5 {
   text-align: center;
 }
+.sidebar p {
+  text-align: center;
+  font-style: 18px;
+  margin:0 40px;
+}
 .log {
   background: #fff;
-  border-right:1px solid #ddd;
 }
 .log h2 {
   color:rgba(0,0,0,.5);
 }
 .user-num {
-   color:#333;
+   color:#1877F2;
    display: block;
 }
 .user-sum {
    color:#1877F2;
 }
+.user-name {
+  display: inline-block;
+}
 .log .ledger {
   background: #eee;
   min-height: 700px;
+  margin-top:46px;
 }
 .signup-container {
   background: #eee;
@@ -125,7 +142,7 @@ button.inactive {
 .log td:first-child {
   padding-left: 40px;
 }
-.log td:nth-child(2) {
+.log td:nth-child(3) {
   flex-grow: 2;
 }
 .log td:last-child {
@@ -176,9 +193,9 @@ button.inactive {
 }
 .campaign-avatar {
   position: relative;
-  height: 124px;
-  width: 124px;
-  margin:40px auto;
+  height: 110px;
+  width: 110px;
+  margin:80px auto 50px;
   border-radius:50%;
 }
 .avatar {
@@ -187,7 +204,7 @@ button.inactive {
   width: 44px;
 }
 .campaign-avatar i {
-  font-size: 134px;
+  font-size: 130px;
   line-height: 124px;
   margin-left: -4px;
   color:#000;
@@ -199,6 +216,7 @@ button.inactive {
   height: 44px;
   width: 44px;
   border-radius: 50%;
+  border:3px solid #000;
 }
 .facebook-logo {
   background:url('../images/fb-logo.png') no-repeat;
@@ -234,9 +252,8 @@ button.inactive {
 }
 .region-list li {
   list-style: none;
-  padding: 20px 0px;
-  border-bottom: 1px solid #eee;
-  margin:0 0 0 14%;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;;
 }
 #burst-placeholder {
   background:url('../images/burst-placeholder.png') no-repeat;
@@ -246,4 +263,5 @@ button.inactive {
   margin:0 auto;
 
 }
+
 
