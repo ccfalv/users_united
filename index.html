@@ -110,50 +110,15 @@
       </div>
     </div>
   </div>
-  <div class="hero">
-    <div class="container">
-      <div class="row">    
-        <div class="columns seven">  
-          <h1>Enough, Zuck</h1>
-            <h4>My personal data is worth more than a like. You made 1.2 Billion last year. Fuck you, pay me.</h4>
-          <button>Join Verified Boycott</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="how-it-works">
-    <div class="container">
-      <div class="row">
-        <div class="columns twelve">
-          <h2>How it works</h2>
-        </div>     
-      </div>
-      <div class="row">
-        <div class="columns four">
-          <h5>Connect Facebook</h5>
-          <div class="steps-img"></div>
-          <p>We're only as strong as our newest member</p>
-        </div>   
-        <div class="columns four">
-          <h5>Stop using it</h5>
-          <div class="steps-img"></div>
-          <p>We're only as strong as our newest member</p>
-        </div> 
-        <div class="columns four">
-          <h5>Spread the word</h5>
-          <div class="steps-img"></div>
-          <p>We're only as strong as our newest member</p>
-        </div>   
-      </div>
-    </div>
-  </div>
   <div class="log">
     <div class="container">
       <div class="row">
         <div class="columns three sidebar">
-          <div class="campaign-avatar"><div class="facebook-logo"><i class="fa fa-ban"></i></div></div>
-          <p><strong>23</strong> Users United boycotting Facebook resulting in  <strong>$123</strong> lost revenue.</p>
-          <canvas id="myChart"></canvas>
+          <div class="sidebar-content">
+            <div class="campaign-avatar"><div class="facebook-logo"></div></div>
+            <p>We are <strong>23</strong> Users United boycotting Facebook resulting in  <strong>$123</strong> lost revenue.</p>
+            <canvas id="myChart"></canvas>
+          </div>
         </div>
         <div class="columns nine ledger">
           <table class="u-full-width">
@@ -271,11 +236,15 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
         datasets: [{
-            backgroundColor: 'rgb(24, 119, 242)',
-            borderColor: 'rgb(0, 0, 0)',
-            data: [0, 1, 5, 7, 20, 30, 45]
+            backgroundColor: 'rgba(24, 119, 242,.6)',
+            borderColor: 'rgba(24, 119, 242)',
+            data: [0, 0,50,130,700,1200],
+            pointBackgroundColor: "#000",
+            pointRadius:4,
+            lineTension:0
+                    
         }]
     },
 
@@ -283,8 +252,17 @@ var chart = new Chart(ctx, {
     options: {
       legend: {
           display: false,
-      }
-    }
+          fontColor: 'rgb(255, 99, 132)'
+      },
+      scales: {
+            yAxes: [{
+                ticks: {
+                    display: false,
+                    beginAtZero:true,
+                }
+            }],
+        },
+    },
 });
   </script>
 

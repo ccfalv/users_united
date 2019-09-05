@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="css/landing.css">
   <link rel="stylesheet" href="css/fa.min.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" type="text/css" href="css/tabby-ui-vertical.min.css">
 
@@ -52,6 +53,22 @@
     <div class="container">
       <div class="row">
         <div class="columns three uu-logo">
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <ul id="menu">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Info</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+              </ul>
+            </div>
+          </nav>
           <div class="uu-logo">
             <span><strong>USERS</strong>UNITED</span>
           </div>
@@ -63,17 +80,6 @@
               <button>Login</button>
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero">
-    <div class="container">
-      <div class="row">    
-        <div class="columns seven">  
-          <h1>Enough, Zuck</h1>
-            <h4>My personal data is worth more than a like. You made 1.2 Billion last year. Fuck you, pay me.</h4>
-          <button>Join Verified Boycott</button>
         </div>
       </div>
     </div>
@@ -108,26 +114,28 @@
     <div class="container">
       <div class="row">
         <div class="columns three sidebar">
-          <div class="campaign-avatar"><div class="facebook-logo"><i class="fa fa-ban"></i></div></div>
-          <h5>Facebook Boycott</h5>
-          <ul data-tabs>
-            <li><a data-tabby-default href="#connect-facebook"><div class="category-icon social-icon active"></div>Connect Facebook</a></li>
-            <li><a href="#connect-near"><div class="category-icon search-icon"></div>Setup NEAR</a></li>
-            <li><a href="#post-reason"><div class="category-icon spending-icon"></div>Post message<span>0</span>
-            </a></li>
-          </ul>
+          <div class="sidebar-content">
+            <div class="campaign-avatar"><div class="facebook-logo"></div></div>
+            <h5>Facebook Boycott</h5>
+            <ul data-tabs>
+              <li><a data-tabby-default href="#connect-facebook"><div class="category-icon social-icon active"></div>Connect Facebook</a></li>
+              <li><a href="#connect-near"><div class="category-icon search-icon"></div>Setup NEAR</a></li>
+              <li><a href="#post-reason"><div class="category-icon spending-icon"></div>Post message<span>0</span>
+              </a></li>
+            </ul>
+          </div>
         </div>
-        <div id="connect-facebook" class="columns nine signup-container">
+        <div id="connect-facebook" class="columns nine ledger">
           <p><strong>1.) Connect Facebook</strong></p>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
           <button>Connect Facebook</button>
         </div>
-        <div id="connect-near" class="columns nine signup-container">
+        <div id="connect-near" class="columns nine ledger">
           <p><strong>2.) Connect Near</strong></p>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
           <button>Connect Near</button>
         </div>
-        <div id="post-reason" class="columns nine signup-container">
+        <div id="post-reason" class="columns nine ledger">
           <p><strong>3.) Post Message</strong></p>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
           <button>Post Message</button>

@@ -1,4 +1,5 @@
 window.onload = function() {
+  var tabs = new Tabby('[data-tabs]');
 
 (function($) {
   $('#circle-container').circleProgress({

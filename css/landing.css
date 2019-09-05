@@ -14,11 +14,17 @@ p {
 button {
   background: #000;
 }
+.sidebar button {
+  width: 100%;
+}
 button.inactive {
   background: rgba(0,0,0,.4);
 }
 .logo {
   background: #eee;
+}
+nav {
+  position: absolute;
 }
 .header {
   background: #fff;
@@ -102,13 +108,17 @@ button.inactive {
   height:200px;
   margin:0 auto;
 }
+.sidebar-content {
+  position: fixed;
+  width: inherit;
+}
 .sidebar h5 {
   text-align: center;
 }
 .sidebar p {
   text-align: center;
-  font-style: 18px;
-  margin:0 40px;
+  font-size: 22px;
+  margin:40px 40px 40px;
 }
 .log {
   background: #fff;
@@ -130,6 +140,8 @@ button.inactive {
   background: #eee;
   min-height: 700px;
   margin-top:46px;
+  position: relative;
+  float: right;
 }
 .signup-container {
   background: #eee;
@@ -193,22 +205,15 @@ button.inactive {
 }
 .campaign-avatar {
   position: relative;
-  height: 110px;
-  width: 110px;
-  margin:80px auto 50px;
+  height: 116px;
+  width: 116px;
+  margin:90px auto 50px;
   border-radius:50%;
 }
 .avatar {
   position: relative;
   height: 44px;
   width: 44px;
-}
-.campaign-avatar i {
-  font-size: 130px;
-  line-height: 124px;
-  margin-left: -4px;
-  color:#000;
-  opacity: 1;
 }
 .avatar-placeholder {
   background:url('../images/avatar-placeholder.png') no-repeat;
@@ -220,9 +225,9 @@ button.inactive {
 }
 .facebook-logo {
   background:url('../images/fb-logo.png') no-repeat;
-  background-size:124px 124px;
-  height: 124px;
-  width: 124px;
+  background-size:116px 116px;
+  height: 116px;
+  width: 116px;
 }
 .transaction-content {
   padding:0 0 0 40px;
@@ -263,5 +268,6 @@ button.inactive {
   margin:0 auto;
 
 }
+
 
 
