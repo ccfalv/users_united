@@ -148,7 +148,7 @@ nav {
   min-height: 700px;
   padding:40px;
 }
-.ledger tr {
+.log tr {
   display: flex;
 }
 .log td:first-child {
@@ -255,18 +255,9 @@ nav {
     color:#000;
     font-family: 'Michroma', sans-serif;
 }
-.region-list li {
-  list-style: none;
-  padding: 20px 40px;
-  border-bottom: 1px solid #eee;;
-}
-#burst-placeholder {
-  background:url('../images/burst-placeholder.png') no-repeat;
-  background-size: 325px 253px;
-  width: 352px;
-  height:253px;
-  margin:0 auto;
-
+.signup-content {
+  text-align: center;
+  padding: 40px 100px;
 }
 
 
