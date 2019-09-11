@@ -1,164 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <!-- Basic Page Needs
+  <head>
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Users United</title>
-  <meta name="description" content="Users United">
-  <meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>Users United</title>
+    <meta name="description" content="Users United" />
+    <meta name="author" content="" />
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FONT
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<link href="https://fonts.googleapis.com/css?family=Crete+Round|Major+Mono+Display|Roboto:700,300,100" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Crete+Round|Major+Mono+Display|Roboto:700,300,100"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Michroma"
+      rel="stylesheet"
+    />
 
-  <!-- CSS
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/landing.css">
-  <link rel="stylesheet" href="css/fa.min.css">
-  <link rel="stylesheet" href="css/modal.css">
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="css/tabby-ui-vertical.min.css">
-
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="css/fa.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/tabby-ui-vertical.min.css"
+    />
 
     <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-
-  <!-- Favicon
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
 
-</head>
-<body>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "384002515644565",
+          cookie: true,
+          xfbml: true,
+          version: "v4.0"
+        });
 
-  <!-- Primary Page Layout
+        FB.AppEvents.logPageView();
+        joinInit();
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+  </head>
+  <body>
+    <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="header">
-    <div class="container">
-      <div class="row">
-        <div class="columns three uu-logo">
-          <nav role="navigation">
-            <div id="menuToggle">
-              <input type="checkbox" />
-              <span></span>
-              <span></span>
-              <span></span>
-              
-              <ul id="menu">
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Info</li></a>
-                <a href="#"><li>Contact</li></a>
-                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-              </ul>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="columns three uu-logo">
+            <nav role="navigation">
+              <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                  <a href="#"><li>Home</li></a>
+                  <a href="#"><li>About</li></a>
+                  <a href="#"><li>Info</li></a>
+                  <a href="#"><li>Contact</li></a>
+                  <a href="https://erikterwan.com/" target="_blank"
+                    ><li>Show me more</li></a
+                  >
+                </ul>
+              </div>
+            </nav>
+            <div class="uu-logo">
+              <a href="/"><strong>USERS</strong>UNITED</a>
             </div>
-          </nav>
-          <div class="uu-logo">
-            <span><strong>USERS</strong>UNITED</span>
           </div>
-        </div>
-        <div class="menu columns nine">
-          <span>Facebook Boycott/Join</span>
-          <ul class="u-pull-right">         
-            <li>
-              <button>Login</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="how-it-works">
-    <div class="container">
-      <div class="row">
-        <div class="columns twelve">
-          <h2>How it works</h2>
-        </div>     
-      </div>
-      <div class="row">
-        <div class="columns four">
-          <h5>Connect Facebook</h5>
-          <div class="steps-img"></div>
-          <p>We're only as strong as our newest member</p>
-        </div>   
-        <div class="columns four">
-          <h5>Stop using it</h5>
-          <div class="steps-img"></div>
-          <p>We're only as strong as our newest member</p>
-        </div> 
-        <div class="columns four">
-          <h5>Spread the word</h5>
-          <div class="steps-img"></div>
-          <p>We're only as strong as our newest member</p>
-        </div>   
-      </div>
-    </div>
-  </div>
-  <div class="log">
-    <div class="container">
-      <div class="row">
-        <div class="columns three sidebar">
-          <div class="sidebar-content">
-            <div class="campaign-avatar"><div class="facebook-logo"></div></div>
-            <h5>Facebook Boycott</h5>
-            <ul data-tabs>
-              <li><a data-tabby-default href="#connect-facebook"><div class="category-icon social-icon active"></div>Connect Facebook</a></li>
-              <li><a href="#connect-near"><div class="category-icon search-icon"></div>Setup NEAR</a></li>
-              <li><a href="#post-reason"><div class="category-icon spending-icon"></div>Post message<span>0</span>
-              </a></li>
+          <div class="menu columns nine">
+            <span>Facebook Boycott/Join</span>
+            <ul class="u-pull-right">
+              <li>
+                <button>Login</button>
+              </li>
             </ul>
           </div>
         </div>
-        <div id="connect-facebook" class="columns nine ledger">
-          <div class="signup-content">
-            <span>Turn On</span>
-            <p><strong>Connect Facebook</strong></p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-            <button>Connect Facebook</button>
+      </div>
+    </div>
+    <div class="how-it-works">
+      <div class="container">
+        <div class="row">
+          <div class="columns twelve">
+            <h2>How it works</h2>
           </div>
         </div>
-        <div id="connect-near" class="columns nine ledger">
-          <div class="signup-content">
-            <span>Tune In </span>
-            <p><strong>Join Boycott</strong></p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-            <button>Connect Near</button>
+        <div class="row">
+          <div class="columns four">
+            <h5>Connect Facebook</h5>
+            <div class="steps-img"></div>
+            <p>We're only as strong as our newest member</p>
           </div>
-        </div>
-        <div id="post-reason" class="columns nine ledger">
-          <div class="signup-content">
-            <span>Drop Out</span>
-            <p><strong>Share Boycott</strong></p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-            <button>Post Message</button>
+          <div class="columns four">
+            <h5>Stop using it</h5>
+            <div class="steps-img"></div>
+            <p>We're only as strong as our newest member</p>
+          </div>
+          <div class="columns four">
+            <h5>Spread the word</h5>
+            <div class="steps-img"></div>
+            <p>We're only as strong as our newest member</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="js/micromodal.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="js/tabby.polyfills.min.js"></script>
-  <script src="dist/circle-progress.js"></script>
-  <script src="js/app.js"></script>
+    <div class="log">
+      <div class="container">
+        <div class="row">
+          <div class="columns three sidebar">
+            <div class="sidebar-content">
+              <div class="campaign-avatar">
+                <div class="facebook-logo"></div>
+              </div>
+              <h5>Facebook Boycott</h5>
+              <ul data-tabs>
+                <li>
+                  <a data-tabby-default href="#connect-facebook"
+                    ><div class="category-icon social-icon active"></div>
+                    Connect Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href="#connect-near"
+                    ><div class="category-icon search-icon"></div>
+                    Setup NEAR</a
+                  >
+                </li>
+                <li>
+                  <a href="#post-reason"
+                    ><div class="category-icon spending-icon"></div>
+                    Post message (<span>0</span>)
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="connect-facebook" class="columns nine ledger">
+            <div class="signup-content">
+              <span>Turn On</span>
+              <p><strong>Connect Facebook</strong></p>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that
+              </p>
+              <button onclick="facebookLogin()">
+                Connect Facebook
+                <!-- <fb:login-button scope="public_profile,email" /> -->
+              </button>
+            </div>
+          </div>
+          <div id="connect-near" class="columns nine ledger">
+            <div class="signup-content">
+              <span>Tune In </span>
+              <p><strong>Join Boycott</strong></p>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that
+              </p>
+              <button onclick="nearLogin()">Connect Near</button>
+            </div>
+          </div>
+          <div id="post-reason" class="columns nine ledger">
+            <div class="signup-content">
+              <span>Drop Out</span>
+              <p><strong>Share Boycott</strong></p>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that
+              </p>
+              <button onclick="postMessage()">Post Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- End Document
+    <div class="modal micromodal-slide" id="intro-modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">
+              Leave message to Zuck
+            </h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            ></button>
+          </header>
+          <main class="modal__content" id="modal-1-content">
+            <div style="display: flex;">
+              <input
+                type="text"
+                maxlength="50"
+                id="message"
+                autofocus
+                placeholder="I am boycotting facebook because..."
+                style="flex: 1;"
+              />
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button onclick="sendMessage()">send message</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+    <script src="js/micromodal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/tabby.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nearprotocol/nearlib@0.13.2/dist/nearlib.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/src/config.js"></script>
+    <script src="./js/near.js"></script>
+    <script src="./js/join.js"></script>
+  </body>
 </html>

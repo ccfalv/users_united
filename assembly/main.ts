@@ -15,8 +15,7 @@ export function addMessage(
     name,
     photo,
     date,
-    email,
-    index: 0
+    email
   };
   storage.setString(id, date);
   messages.push(message);
@@ -29,8 +28,13 @@ export function getRangeMessages(start: i32 = 0): Array<PostedMessage> {
     let startIndex = start;
     for (let i = 0; i < numMessages; i++) {
       result[i] = messages[i + startIndex];
-      result[i].index = i + startIndex;
+      // result[i].index = i + startIndex;
     }
   }
   return result;
+}
+
+export function messagesPop(): number {
+  messages.pop();
+  return messages.length;
 }
