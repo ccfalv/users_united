@@ -52,8 +52,7 @@ function sendMessage() {
     contract
       .addMessage({ text, id, name, email, photo, date })
       .then(res => {
-        console.log(res);
-        MicroModal.hide("intro-modal");
+        window.location.href = "/";
       })
       .catch(window.alert);
   });
@@ -61,7 +60,6 @@ function sendMessage() {
 
 function sendMessageMock() {
   const text = $("#message").val();
-
   const photo = "test";
   const email = "test@test.com";
   const id = "test111";
