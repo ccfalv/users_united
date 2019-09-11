@@ -244,6 +244,7 @@
                 autofocus
                 placeholder="I am boycotting facebook because..."
                 style="flex: 1;"
+                onkeyup="event.keyCode === 13 && sendMessage()"
               />
             </div>
           </main>
