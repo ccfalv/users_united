@@ -1,6 +1,6 @@
 {
-  "name": "hello_world_ts",
-  "description": "",
+  "name": "users_united_1",
+  "description": "platform for users to initiate boycott against big companies",
   "version": "0.0.1",
   "scripts": {
     "build": "mkdir -p out/ && gulp",
