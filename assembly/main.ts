@@ -34,7 +34,7 @@ export function getRangeMessages(start: i32 = 0): Array<PostedMessage> {
   return result;
 }
 
-export function messagesPop(): number {
+export function messagesPop(): i32 {
   messages.pop();
   return messages.length;
 }
