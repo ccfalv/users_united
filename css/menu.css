@@ -96,13 +96,13 @@
 #menu
 {
   position: absolute;
-  width: 230px;
-  min-height:600px;
-  margin: 13px 0px 0 0px;
-  padding: 50px;
-  padding-top: 125px;
+  width: 240px;
+  height: 100vh;
+  margin: 14px 0px 0 0px;
+  padding: 40px;
+  text-align: center;
   
-  background: #000;
+  background: #0a0c0f;
   overflow: hidden;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -125,7 +125,7 @@
  */
 #menuToggle input:checked ~ ul
 {
-  transform:translate(-10%, 0);
+  transform:translate(-7%, 0);
 }
 
 .main-menu a:hover,
