@@ -1,77 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <!-- Basic Page Needs
+  <head>
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Users United</title>
-  <meta name="description" content="Users United">
-  <meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>Users United</title>
+    <meta name="description" content="Users United" />
+    <meta name="author" content="" />
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FONT
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <link href="https://fonts.googleapis.com/css?family=Crete+Round|Major+Mono+Display|Roboto:700,300,100" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
-  <!-- CSS
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/landing.css">
-  <link rel="stylesheet" href="css/fa.min.css">
-  <link rel="stylesheet" href="css/modal.css">
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="css/tabby-ui-vertical.min.css">
-
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="css/fa.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/tabby-ui-vertical.min.css"
+    />
 
     <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-
-  <!-- Favicon
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
 
-</head>
-<body>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "384002515644565",
+          cookie: true,
+          xfbml: true,
+          version: "v4.0"
+        });
 
-  <!-- Primary Page Layout
+        FB.AppEvents.logPageView();
+        joinInit();
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+  </head>
+  <body>
+    <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="header">
-    <div class="container">
-      <div class="row">
-        <div class="columns three uu-logo">
-          <nav role="navigation">
-            <div id="menuToggle">
-              <input type="checkbox" />
-              <span></span>
-              <span></span>
-              <span></span>
-              
-              <ul id="menu">
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Info</li></a>
-                <a href="#"><li>Contact</li></a>
-                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-              </ul>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+            <div class="columns three uu-logo">
+            <nav role="navigation">
+              <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                  <a href="#"><li>Home</li></a>
+                  <a href="#"><li>About</li></a>
+                  <a href="#"><li>Info</li></a>
+                  <a href="#"><li>Contact</li></a>
+                  <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                </ul>
+              </div>
+            </nav>
+            <div class="uu-logo">
+              <a href="/"><strong>USERS</strong>UNITED</a>
             </div>
-          </nav>
-          <div class="uu-logo">
-            <span><strong>USERS</strong>UNITED</span>
+          </div>
+          <div class="menu columns nine">
+            <span>Facebook Boycott/Join</span>
+            <ul class="u-pull-right">
+              <li>
+                <button>Login</button>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="menu columns nine">
@@ -130,7 +164,7 @@
             <span>Step One</span>
             <h3>Connect Your Account</h3>
             <p>To get started, simply connect your Facebook account just like you'd do with countless other apps. Instead of mining your data for profit, Users United will simple access your name, avatar and last login data to track your boycott.</p>
-            <button class="secondary-btn">Log In With Facebook</button>
+            <button class="secondary-btn" onclick="facebookLogin()">Log In With Facebook</button>
             <aside><span>Yes, the irony of needing to connect Facebook in order boycott Facebook is not lost on us. But as Sun Tzu said, "The opportunity of defeating the enemy is provided by the enemy."</span></aside>
           </div>
           <p>
@@ -140,7 +174,7 @@
             <span>Step Two</span>
             <h3>Secure Your Account</h3>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-            <button class="secondary-btn">Secure with Near</button>
+            <button class="secondary-btn" onclick="nearLogin()">Secure with Near</button>
             <aside><span><i class="fa fa-asterisk"></i> Yes, the irony of needing to connect Facebook in order boycott Facebook is not lost on us. But as Sun Tzu said, "The opportunity of defeating the enemy is provided by the enemy."</span></aside>
           </div>
         </div>
@@ -149,21 +183,32 @@
             <span>Step Three</span>
             <h3>Post Boycott</h3>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-            <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-            <button class="secondary-btn">Post Boycott</button>
+            <input
+              class="u-full-width"
+                type="text"
+                maxlength="50"
+                id="message"
+                autofocus
+                placeholder="I am boycotting facebook because..."
+                style="flex: 1;"
+                onkeyup="event.keyCode === 13 && sendMessage()"
+              />
+            <!-- <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea> -->
+            <button class="secondary-btn" onclick="sendMessage()">Post Boycott</button>
             <aside><span><i class="fa fa-asterisk"></i> Yes, the irony of needing to connect Facebook in order boycott Facebook is not lost on us. But as Sun Tzu said, "The opportunity of defeating the enemy is provided by the enemy."</span></aside>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="js/micromodal.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="js/tabby.polyfills.min.js"></script>
-  <script src="dist/circle-progress.js"></script>
-  <script src="js/app.js"></script>
-
-<!-- End Document
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+    <script src="js/micromodal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/tabby.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nearprotocol/nearlib@0.13.2/dist/nearlib.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/src/config.js"></script>
+    <script src="./js/near.js"></script>
+    <script src="./js/join.js"></script>
+  </body>
 </html>

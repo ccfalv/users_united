@@ -82,7 +82,8 @@ a.cta-link  {
 }
 .uu-logo {
   text-align: center;
-  flex-grow: 2;
+  flex: 1;
+  line-height: 42px;
 }
 .menu ul { 
   display:flex;

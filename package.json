@@ -1,0 +1,29 @@
+{
+  "name": "users_united_1",
+  "description": "platform for users to initiate boycott against big companies",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "mkdir -p out/ && gulp",
+    "deploy:contract": "near deploy",
+    "prestart": "npm run build && npm run deploy:contract",
+    "start": "serve .",
+    "test": "npm run build && jest test --env=near-shell/test_environment"
+  },
+  "devDependencies": {
+    "assemblyscript-json": "github:nearprotocol/assemblyscript-json",
+    "bignum": "github:MaxGraey/bignum.wasm",
+    "gulp": "^4.0.2",
+    "jest": "^24.8.0",
+    "jest-environment-node": "^24.8.0",
+    "near-shell": "github:nearprotocol/near-shell"
+  },
+  "wasmStudio": {
+    "name": "Users United",
+    "description": "Platform for expressing users' dissents against other platform",
+    "icon": "typescript-lang-file-icon"
+  },
+  "dependencies": {
+    "near-runtime-ts": "^0.2.1",
+    "serve": "^11.0.1"
+  }
+}
