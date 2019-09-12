@@ -44,7 +44,7 @@ nav {
 }
 .header .menu {
   border-left: 1px solid #eee;
-  padding-left:40px;
+  padding:0 40px;
 }
 .menu a.toggle {
   margin:10px 10px 10px 0;
@@ -409,6 +409,9 @@ a.cta-link  {
 }
 .sidebar-menu .active {
   color:#fff;
+}
+.login-btn {
+
 }
 
 
