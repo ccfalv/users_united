@@ -4,13 +4,13 @@ function facebookLogin() {
   try {
     FB.login();
     if (walletAccount.isSignedIn()) {
-      tabs.toggle("#post-reason");
+      tabs.toggle("post-reason");
     } else {
-      tabs.toggle("#connect-near");
+      tabs.toggle("connect-near");
     }
   } catch (error) {
-    // window.history.pushState(null, null, "#connect-near");
-    // tabs.toggle("#connect-near");
+    // window.history.pushState(null, null, "connect-near");
+    // tabs.toggle("connect-near");
     // console.error(error);
     alert(error);
   }
@@ -26,19 +26,19 @@ function nearLogin() {
       )
       .then(() => {
         window.alert("login success");
-        tabs.toggle("#post-reason");
+        tabs.toggle("post-reason");
       })
       .catch(() => window.alert("login failure"));
   } catch (error) {
-    // window.history.pushState(null, null, "#connect-near");
-    tabs.toggle("#connect-near");
+    // window.history.pushState(null, null, "connect-near");
+    tabs.toggle("connect-near");
     console.error(error);
   }
 }
 
-function postMessage() {
-  MicroModal.show("intro-modal");
-}
+// function postMessage() {
+//   MicroModal.show("intro-modal");
+// }
 function sendMessage() {
   const text = $("#message").val();
   FB.api("/me", { fields: ["picture", "name", "email"] }, async function({
@@ -78,9 +78,9 @@ function joinInit() {
   FB.getLoginStatus(({ status }) => {
     if (status === "connected") {
       if (walletAccount.isSignedIn()) {
-        tabs.toggle("#post-reason");
+        tabs.toggle("post-reason");
       } else {
-        tabs.toggle("#connect-near");
+        tabs.toggle("connect-near");
       }
     }
   });
@@ -89,5 +89,5 @@ function joinInit() {
 (async function($) {
   nearInit();
   tabs = new Tabby("[data-tabs]");
-  MicroModal.init({});
+  // MicroModal.init({});
 })(jQuery);

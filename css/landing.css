@@ -12,13 +12,18 @@ p {
   font-weight: 300;
 }
 button {
-  background: #000;
+  background: #1877F2;
 }
 .sidebar button {
-  width: 100%;
+  width: inherit;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  z-index: 101;
 }
-button.inactive {
-  background: rgba(0,0,0,.4);
+button.secondary-btn {
+  background:#0a0c0f;
+  color:#fff;
 }
 .logo {
   background: #eee;
@@ -39,7 +44,7 @@ nav {
 }
 .header .menu {
   border-left: 1px solid #eee;
-  padding-left: 40px;
+  padding-left:40px;
 }
 .menu a.toggle {
   margin:10px 10px 10px 0;
@@ -52,6 +57,14 @@ nav {
 }
 .menu a.toggle.active { 
   color:rgba(0,0,0,1);
+}
+.menu a {
+  color:#0a0c0f;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a.cta-link  {
+  color:#1877F2;
 }
 .campaign-title {
   font-size: 18px;
@@ -66,8 +79,6 @@ nav {
 }
 .header button {
   margin-bottom: 0;
-  padding-right:44px;
-  padding-left:44px;
 }
 .uu-logo {
   text-align: center;
@@ -109,9 +120,40 @@ nav {
   height:200px;
   margin:0 auto;
 }
+.sidebar {
+  height: 100vh;
+}
 .sidebar-content {
   position: fixed;
   width: inherit;
+  background:#0a0c0f;
+  height: 100vh;
+}
+.sidebar-content strong {
+  color:#1877F2;
+}
+.sidebar-content h5 {
+  color:#fff;
+}
+.sidebar-menu li {
+  margin:0;
+}
+.sidebar-menu li a span {
+  padding:0 6px;
+  line-height: 22px;
+  border:1px solid #788697;
+  border-radius: 50%;
+  float: right;
+}
+.sidebar-menu .active span {
+  color:#1877F2;
+  border-color:#1877F2;
+}
+.sidebar-menu li a i {
+  display: none;
+}
+.sidebar-menu .active i {
+  color:#1877F2;
 }
 .sidebar h5 {
   text-align: center;
@@ -119,7 +161,27 @@ nav {
 .sidebar p {
   text-align: center;
   font-size: 22px;
-  margin:40px 40px 40px;
+  margin:20px 40px 20px;
+  color:#fff;
+}
+.sidebar-menu [role=tab][aria-selected=true] {
+    background: #0a0c0f;
+    color: #fff;
+}
+.sidebar-menu [role=tab] {
+    background: #0a0c0f;
+    border-top: 1px solid #2e3135;
+    padding: 1.25em 2.2em;
+    color: #788697;
+}
+.sidebar-menu[role=tablist]{
+  border-bottom: 1px solid #2e3135;
+}
+.sidebar section {
+  width: 100%;
+  border-bottom:1px solid #2e3135;
+  display: block;
+  padding:10px 40px;
 }
 .log {
   background: #fff;
@@ -130,24 +192,36 @@ nav {
 .user-num {
    color:#1877F2;
    display: block;
+   font-weight: 100;
+   font-family: 'Michroma', sans-serif;
+   font-size: 14px;
 }
 .user-sum {
    color:#1877F2;
+   font-weight: 100;
+   font-family: 'Michroma', sans-serif;
+   font-size: 14px;
 }
 .user-name {
   display: inline-block;
 }
 .log .ledger {
-  background: #eee;
   min-height: 700px;
   margin-top:46px;
   position: relative;
   float: right;
+  background:url('../images/zuck-light.png') no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 .signup-container {
-  background: #eee;
+  margin-top:42px;
   min-height: 700px;
-  padding:40px;
+  position: relative;
+  float: right;
+  background:url('../images/zuck-light.png') no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 .log tr {
   display: flex;
@@ -185,7 +259,7 @@ nav {
   list-style: none;
   width: 90%;
   border-bottom:1px solid #ccc;
-  border-left:1px dashed #000;
+  border-left:1px dashed #0a0c0f;
   padding:30px 0;
   margin:1px 0;
   display: inline-flex;
@@ -208,21 +282,21 @@ nav {
   position: relative;
   height: 116px;
   width: 116px;
-  margin:90px auto 50px;
+  margin:80px auto 20px;
   border-radius:50%;
 }
 .avatar {
   position: relative;
-  height: 44px;
-  width: 44px;
+  height: 42px;
+  width: 42px;
 }
 .avatar-placeholder {
   background:url('../images/avatar-placeholder.png') no-repeat;
-  background-size:44px 44px;
-  height: 44px;
-  width: 44px;
+  background-size:42px 42px;
+  height: 42px;
+  width: 42px;
   border-radius: 50%;
-  border:3px solid #000;
+  margin-top: 4px;
 }
 .facebook-logo {
   background:url('../images/fb-logo.png') no-repeat;
@@ -253,12 +327,89 @@ nav {
     text-align: center;
     line-height: 0px;
     font-size: 30px;
-    color:#000;
+    color:#0a0c0f;
     font-family: 'Michroma', sans-serif;
 }
 .signup-content {
+  padding: 40px;
+  max-width: 60%;
+  overflow: hidden;
+}
+.signup-content h3 {
+  color:#1877F2;
+}
+.signup-step-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: block;
+  background: #fff;
   text-align: center;
-  padding: 40px 100px;
+  line-height: 40px;
+}
+
+.signup-content .em {
+    position: absolute;
+    font-size: 440px;
+    opacity: .1;
+    float: right;
+    bottom: -127px;
+    right: -50px;
+    z-index: 0;
+}
+.signup-content aside {
+  display: block;
+  padding-top:40px;
+  width: 60%;
+}
+.signup-content aside span {
+  background: #d1e4fc;
+  line-height: 28px;
+  font-style: italic;
+}
+.signup-content i {
+  font-size: 12px;
+  vertical-align: top;
+}
+.signup-content i {
+  color:#1877F2;
+  font-size: 12px;
+}
+.uu-logo-mark {
+  background:url('../images/uu-logo.png') no-repeat;
+  background-size:90px 90px;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.signup-icon {
+  background:url('../images/signup-icons.png') no-repeat;
+  background-size: 64px 40px;
+  height: 20px;
+  width: 20px;
+  display: none;
+}
+.connect-step {
+  background-position: 0px 0;
+}
+.secure-step {
+  background-position: -30px 0;
+}
+.post-step {
+  background-position: -60px 0;
+}
+.active .connect-step {
+  background-position: 0px -30px;
+}
+.active .secure-step {
+  background-position: -30px 0;
+}
+.active .post-step {
+  background-position: -60px 0;
+}
+.sidebar-menu .active {
+  color:#fff;
 }
 
 
