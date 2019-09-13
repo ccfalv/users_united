@@ -81,8 +81,8 @@ function joinInit() {
           console.log(postMsg);
           if (!!postMsg) {
             const searchParams = new URLSearchParams();
-            for (const [key, value] of postMsg) {
-              searchParams.append(key, value);
+            for (const key in postMsg) {
+              searchParams.append(key, postMsg[key]);
             }
             window.location.href = "/profile?" + searchParams.toString();
           } else {
