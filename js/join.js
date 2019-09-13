@@ -78,6 +78,7 @@ function joinInit() {
       contract
         .hasCommented({ id: authResponse.userID })
         .then(postMsg => {
+          console.log(postMsg);
           if (!!postMsg) {
             const searchParams = new URLSearchParams();
             for (const [key, value] of postMsg) {
