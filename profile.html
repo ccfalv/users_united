@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1>profile</h1>
+    <ul></ul>
+    <script defer>
+      const searchParams = new URLSearchParams(window.location.search);
+      const lis = [];
+      for (const [key, value] of searchParams) {
+        const li = document.createElement("LI");
+        if (key === "photo") {
+          li.innerHTML = `${key} : <img src="${value}" alt="photo" />`;
+        } else {
+          li.append(`${key} : ${value}`);
+        }
+        lis.push(li);
+      }
+      console.log(lis);
+      lis.map(l => document.querySelector("ul").appendChild(l));
+    </script>
+  </body>
+</html>

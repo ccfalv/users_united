@@ -20,7 +20,7 @@ async function nearInit() {
   //   }
   // );
   window.contract = await near.loadContract(nearConfig.contractName, {
-    viewMethods: ["getMessages", "getRangeMessages"],
+    viewMethods: ["getRangeMessages", "hasCommented"],
     changeMethods: ["addMessage"],
     sender: walletAccount.getAccountId()
   });

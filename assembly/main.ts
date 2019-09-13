@@ -1,6 +1,6 @@
 import { storage, PersistentVector } from "near-runtime-ts";
-import { PostedMessage } from "./model";
-let messages = new PersistentVector<PostedMessage>("m");
+import { PostedMessage, VectorMessage } from "./model";
+const messages = new PersistentVector<VectorMessage>("v");
 export function addMessage(
   text: string,
   id: string,
@@ -9,7 +9,8 @@ export function addMessage(
   email: string,
   date: string
 ): void {
-  let message: PostedMessage = {
+  const pMsg: PostedMessage = {
+    index: messages.length,
     id,
     text,
     name,
@@ -17,21 +18,24 @@ export function addMessage(
     date,
     email
   };
-  storage.setString(id, date);
-  messages.push(message);
+  const vMsg: VectorMessage = { id, text, name, photo, date };
+  storage.set<PostedMessage>(id, pMsg);
+  messages.push(vMsg);
 }
 
-export function getRangeMessages(start: i32 = 0): Array<PostedMessage> {
+export function getRangeMessages(start: i32 = 0): Array<VectorMessage> {
   let numMessages: i32 = messages.length < start ? 0 : messages.length - start;
-  let result = Array.create<PostedMessage>(numMessages);
+  let result = Array.create<VectorMessage>(numMessages);
   if (numMessages > 0) {
-    let startIndex = start;
     for (let i = 0; i < numMessages; i++) {
-      result[i] = messages[i + startIndex];
-      // result[i].index = i + startIndex;
+      result[i] = messages[i + start];
     }
   }
   return result;
+}
+
+export function hasCommented(id: string): PostedMessage | null {
+  return storage.get<PostedMessage>(id);
 }
 
 export function messagesPop(): i32 {
