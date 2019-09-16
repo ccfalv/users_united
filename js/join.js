@@ -2,16 +2,8 @@ let tabs;
 
 function facebookLogin() {
   try {
-    FB.login();
-    if (walletAccount.isSignedIn()) {
-      tabs.toggle("post-reason");
-    } else {
-      tabs.toggle("connect-near");
-    }
+    FB.login(joinInit);
   } catch (error) {
-    // window.history.pushState(null, null, "connect-near");
-    // tabs.toggle("connect-near");
-    // console.error(error);
     alert(error);
   }
 }
@@ -25,7 +17,7 @@ function nearLogin() {
         "Users United"
       )
       .then(() => {
-        window.alert("login success");
+        // window.alert("login success");
         tabs.toggle("post-reason");
       })
       .catch(() => window.alert("login failure"));
@@ -73,15 +65,31 @@ function sendMessageMock() {
     })
     .catch(window.alert);
 }
-
+function gotoStep2or3() {
+  if (walletAccount.isSignedIn()) {
+    tabs.toggle("post-reason");
+  } else {
+    tabs.toggle("connect-near");
+  }
+}
 function joinInit() {
-  FB.getLoginStatus(({ status }) => {
-    if (status === "connected") {
-      if (walletAccount.isSignedIn()) {
-        tabs.toggle("post-reason");
-      } else {
-        tabs.toggle("connect-near");
-      }
+  FB.getLoginStatus(({ status, authResponse }) => {
+    if (status === "connected" && authResponse.userID) {
+      contract
+        .hasCommented({ id: authResponse.userID })
+        .then(postMsg => {
+          console.log(postMsg);
+          if (!!postMsg) {
+            const searchParams = new URLSearchParams();
+            for (const key in postMsg) {
+              searchParams.append(key, postMsg[key]);
+            }
+            window.location.href = "/profile?" + searchParams.toString();
+          } else {
+            gotoStep2or3();
+          }
+        })
+        .catch(gotoStep2or3);
     }
   });
 }
