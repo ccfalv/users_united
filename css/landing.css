@@ -84,6 +84,7 @@ a.cta-link  {
   text-align: center;
   flex: 1;
   line-height: 42px;
+  color:#0a0b0e;
 }
 .menu ul { 
   display:flex;
@@ -411,8 +412,8 @@ a.cta-link  {
 .sidebar-menu .active {
   color:#fff;
 }
-.login-btn {
-
+.login-btn span {
+  margin-right: 10px;
 }
 
 
