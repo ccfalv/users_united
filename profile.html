@@ -1,8 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Users United</title>
+    <meta name="description" content="Users United" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<link href="https://fonts.googleapis.com/css?family=Crete+Round|Major+Mono+Display|Roboto:700,300,100" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="css/fa.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/tabby-ui-vertical.min.css"
+    />
+
+    <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "384002515644565",
+          cookie: true,
+          xfbml: true,
+          version: "v4.0"
+        });
+
+        FB.AppEvents.logPageView();
+        joinInit();
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+  </head>
   <body>
-    <h1>profile</h1>
-    <ul></ul>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="header">
+      <div class="container">
+        <div class="row">
+         <div class="columns three">
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox">
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <ul id="menu">
+                <div class="uu-logo-mark"></div>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Info</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+              </ul>
+            </div>
+          </nav>
+          <div class="uu-logo">
+            <span><strong>USERS</strong>UNITED</span>
+          </div>
+          <div class="login-btn mobile-login-btn">
+            <a href="#"><i class="fa fa-lock"></i></a>
+          </div>
+        </div>
+        <div class="menu columns nine">
+          <span>#BOYCOTT<strong>FACEBOOK</strong></span>
+          <ul class="u-pull-right">
+            <li>
+              <span>DASHBOARD</span>
+            </li>
+            <li class="login-btn">
+              <a href="#"><span><strong>Profile</strong></span><div class="avatar"><div class="avatar-placeholder"></div></a>
+              </a>
+            </li>
+          </ul>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <div class="how-it-works">
+    <div class="container">
+      <div class="row">
+        <div class="columns twelve">
+          <h2>How it works</h2>
+        </div>     
+      </div>
+      <div class="row">
+        <div class="columns four">
+          <h5>Connect Facebook</h5>
+          <div class="steps-img"></div>
+          <p>We're only as strong as our newest member</p>
+        </div>   
+        <div class="columns four">
+          <h5>Stop using it</h5>
+          <div class="steps-img"></div>
+          <p>We're only as strong as our newest member</p>
+        </div> 
+        <div class="columns four">
+          <h5>Spread the word</h5>
+          <div class="steps-img"></div>
+          <p>We're only as strong as our newest member</p>
+        </div>   
+      </div>
+    </div>
+  </div>
+  <div class="log">
+    <div class="container">
+      <div class="row">
+        <div class="columns three sidebar">
+          <div class="sidebar-content">
+            <div class="campaign-avatar"><div class="facebook-logo"></div></div>
+            <p>We are <strong>23</strong> Users United boycotting Facebook resulting in  <strong>$123</strong> lost revenue.</p>
+            <canvas id="myChart"></canvas>
+            <section><span>Users</span></section>
+            <section><span>Users</span></section>
+            <button class="secondary-btn" onclick="location.href= `join`">Logout</button>
+          </div>
+        </div>
+        <div id="connect-facebook" class="columns nine profile-container">
+          <div class="profile-content">
+            <div class="profile-header">
+              <div class="avatar"><div class="avatar-placeholder"></div></div>
+              <section>
+                <span class="step-number">#122</span>
+                <h3>Casey Falvey</h3>
+                <span class="url-address">https://facebook.com/caseyfalvey</span>
+              </section>
+            </div>
+            <p>To get started, simply connect your Facebook account just like you'd do with countless other apps. Instead of mining your data for profit, Users United will simple access your name, avatar and last login data to track your boycott.</p>
+            <button class="secondary-btn" onclick="facebookLogin()">Log In With Facebook</button>
+            <aside><span>Yes, the irony of needing to connect Facebook in order boycott Facebook is not lost on us. But as Sun Tzu said, "The opportunity of defeating the enemy is provided by the enemy."</span></aside>
+          </div>
+          <p>
+        </div>
+      </div>
+    </div>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
     <script defer>
       const searchParams = new URLSearchParams(window.location.search);
       const lis = [];
@@ -18,5 +193,52 @@
       console.log(lis);
       lis.map(l => document.querySelector("ul").appendChild(l));
     </script>
+    <script src="js/micromodal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/tabby.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nearprotocol/nearlib@0.13.2/dist/nearlib.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/src/config.js"></script>
+    <script src="./js/near.js"></script>
+    <script src="js/app.js"></script>
+    <script src="./js/join.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+            backgroundColor: 'rgba(24, 119, 242,.2)',
+            borderColor: 'rgba(24, 119, 242)',
+            data: [0, 0,50,130,700,1200],
+            pointBackgroundColor: "#000",
+            pointRadius:4,
+            lineTension:0
+                    
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+      legend: {
+          display: false,
+          fontColor: 'rgb(255, 99, 132)'
+      },
+      scales: {
+            yAxes: [{
+                ticks: {
+                    display: false,
+                    beginAtZero:true,
+                }
+            }],
+        },
+    },
+});
+  </script>
   </body>
 </html>
