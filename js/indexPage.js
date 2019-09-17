@@ -1,10 +1,20 @@
 let lastIndex = 0;
-(async function() {
+(async function () {
   await nearInit();
   // console.log(window.contract);
   window.contract
     .getRangeMessages({ start: lastIndex })
     .then(renderMessages)
+    .catch(console.error);
+  const theMonth = new Date();
+  const months = [];
+  for (let i = 0; i < 6; i++) {
+    months.unshift(theMonth.toISOString().substr(0, 7));
+    theMonth.setMonth(theMonth.getMonth() - 1);
+  }
+  window.contract
+    .monthCounters({ yearMonth6: months.join(",") })
+    .then(monthCounters)
     .catch(console.error);
 })(jQuery);
 
@@ -28,4 +38,50 @@ function renderMessages(messages) {
   if (messages.length) {
     lastIndex = Number(messages[messages.length - 1].index) + 1;
   }
+}
+
+function monthCounters(monthCounters) {
+  console.log(monthCounters);
+  const formatter = new Intl.DateTimeFormat("en", { month: 'short' });
+  const theMonth = new Date();
+  const monthLabels = [];
+  for (let i = 0; i < 6; i++) {
+    monthLabels.unshift(formatter.format(theMonth));
+    theMonth.setMonth(theMonth.getMonth() - 1);
+  }
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+      labels: monthLabels,
+      datasets: [{
+        backgroundColor: 'rgba(24, 119, 242,.2)',
+        borderColor: 'rgba(24, 119, 242)',
+        data: monthCounters,
+        pointBackgroundColor: "#000",
+        pointRadius: 4,
+        lineTension: 0
+
+      }]
+    },
+
+    // Configuration options go here
+    options: {
+      legend: {
+        display: false,
+        fontColor: 'rgb(255, 99, 132)'
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            display: false,
+            beginAtZero: true,
+          }
+        }],
+      },
+    },
+  });
 }

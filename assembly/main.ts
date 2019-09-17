@@ -1,6 +1,7 @@
 import { storage, PersistentVector } from "near-runtime-ts";
 import { PostedMessage, VectorMessage } from "./model";
 const messages = new PersistentVector<VectorMessage>("v");
+
 export function addMessage(
   text: string,
   id: string,
@@ -19,8 +20,13 @@ export function addMessage(
     email
   };
   const vMsg: VectorMessage = { id, text, name, photo, date };
+  // if (!storage.get<PostedMessage>(id)) {
+  const yearMonth = date.substr(0, 7);
+  const counter: i32 = storage.getPrimitive<i32>(yearMonth, 0);
+  storage.set<i32>(yearMonth, counter + 1);
   storage.set<PostedMessage>(id, pMsg);
   messages.push(vMsg);
+  // }
 }
 
 export function getRangeMessages(start: i32 = 0): Array<VectorMessage> {
@@ -38,7 +44,13 @@ export function hasCommented(id: string): PostedMessage | null {
   return storage.get<PostedMessage>(id);
 }
 
-export function messagesPop(): i32 {
-  messages.pop();
-  return messages.length;
+export function monthCounter(yearMonth: string): i32 {
+  return storage.getPrimitive<i32>(yearMonth, 0);
+}
+
+export function monthCounters(yearMonth6: string): Array<i32> {
+  const months = yearMonth6.split(",");
+  // const res = Array.create<i32>(6);
+  return months.map<i32>((m: string, i) => storage.getPrimitive<i32>(m, 0))
+  // return res;
 }
