@@ -459,7 +459,7 @@ margin-top:10px;
 .user-stats {
   display: inline-flex;
   width: 100%;
-  margin-top:40px;
+  margin:20px 0 40px;
 }
 .user-stats div {
   flex-grow: 1;
