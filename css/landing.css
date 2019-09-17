@@ -441,6 +441,7 @@ a.cta-link  {
 }
 .profile-header section {
 flex-grow: 2;
+margin-top:10px;
 }
 .profile-header section h3 {
   margin-bottom: 0;
@@ -455,6 +456,16 @@ flex-grow: 2;
   height: 86px;
   width: 86px;
 }
-
-
+.user-stats {
+  display: inline-flex;
+  width: 100%;
+  margin-top:40px;
+}
+.user-stats div {
+  flex-grow: 1;
+}
+.user-stats div  h3 {
+  line-height: 10px;
+  color:#1777f2;
+}
 
