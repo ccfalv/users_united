@@ -106,7 +106,7 @@
             </div>
           </nav>
           <div class="uu-logo">
-            <span><strong>USERS</strong>UNITED</span>
+            <a href="/" style="text-decoration: none; color: black;"><strong>USERS</strong>UNITED</a>
           </div>
           <div class="login-btn mobile-login-btn">
             <a href="#"><i class="fa fa-lock"></i></a>
@@ -117,9 +117,9 @@
           <ul class="u-pull-right">
             <li class="login-btn">
               <a href="#"><span>LOGOUT</span>
-                <div class="avatar">
+                <div class="avatar" id="fbAvatar">
                   <div class="avatar-placeholder"></div>
-              </a>
+                </div>
               </a>
             </li>
           </ul>
@@ -164,9 +164,13 @@
             <p>We are <strong>23</strong> Users United boycotting Facebook resulting in <strong>$123</strong> lost
               revenue.</p>
             <canvas id="myChart"></canvas>
-            <section><span>Users</span></section>
-            <section><span>Users</span></section>
-            <button class="secondary-btn" onclick="location.href= `join`">Share Boycott</button>
+            <section><span>
+                <aside>TOTAL</aside>USERS
+              </span><span class="total-boycott-sum">23</span></section>
+            <section><span>
+                <aside>TOTAL</aside>VALUE
+              </span><span class="total-value-sum">$123.00</span></section>
+            <button class="secondary-btn" onclick="fbShare()">Share Boycott</button>
           </div>
         </div>
         <div id="profilePage" class="columns nine profile-container">
@@ -181,7 +185,7 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="/src/config.js"></script>
     <script src="./js/near.js"></script>
-    <script src="js/app.js"></script>
+    <!-- <script src="js/app.js"></script> -->
     <script src="/js/profile.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </body>

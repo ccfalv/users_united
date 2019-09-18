@@ -74,8 +74,16 @@ function facebookInit() {
         });
     } else {
       // location.href = "join";
+      const id = "10162300482295717"
+      contract
+        .getProfile({ id })
+        .then(changeLogoutBtn)
+        .catch(() => {
+          location.href = "join";
+        });
     }
-  });
+  })
+
 }
 
 
@@ -86,21 +94,22 @@ function logoutHandler() {
 
 
 function changeLogoutBtn(m) {
+  console.log(m);
   const logDate = new Date(m.date);
   const nowDate = new Date();
   const diffTime = Math.abs(nowDate.getTime() - logDate.getTime());
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   const totalCost = Math.round(diffDays * 68) / 1000;
   $("#loginBtn").html(`<a href="#" onClick="logoutHandler()"><span>Logout</span><i class="fa fa-lock"></i></a>`)
-  $("#profilePage").html`
+  $("#profilePage").html(`
 <div class="profile-content">
   <div class="profile-header">
     <div class="avatar">
-      <img src="${m.photo}" alt="img" />
+      <img src="${m.photo}" alt="img" style="width:inherit" />
     </div>
     <section>
       <h3>${m.name}</h3>
-      <span class="url-address">https://facebook.com/?fbid=${m.id}</span>
+      <a href="https://facebook.com/${m.id}" class="url-address">https://facebook.com/${m.id}</a>
     </section>
   </div>
   <section class="user-stats">
@@ -117,9 +126,10 @@ function changeLogoutBtn(m) {
       <span>Boycott Value</span>
     </div>
   </section>
-  <p>I am boycotting Facebook until they start paying me my fair share of the profits made from my data.</p>
+  <p>I am boycotting Facebook until ${m.text}</p>
 </div>
-`
+`);
+  $("#fbAvatar").html(`<img src="${m.photo}" alt="img" style="width:inherit" />`)
 }
 
 function renderMessages(messages) {
@@ -134,4 +144,13 @@ function renderMessages(messages) {
   }, 0)
   $(".total-boycott-sum").text(totalUser);
   $(".total-value-sum").text("$" + totalCost);
+}
+
+function fbShare() {
+  FB.ui({
+    method: 'share',
+    href: 'https://usersunited.org',
+  }, function (response) {
+    console.log(response);
+  });
 }
