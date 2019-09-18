@@ -14,6 +14,9 @@ p {
 button {
   background: #1877F2;
 }
+button:hover {
+  opacity: .8;
+}
 .sidebar button {
   width: inherit;
   position: fixed;
@@ -183,7 +186,7 @@ a.cta-link  {
 .sidebar section {
   border-top:1px solid #2e3135;
   display: flex;
-  padding:6px 20px;
+  padding:10px 20px;
 }
 .sidebar section span {
   font-size: 13px;
@@ -199,6 +202,9 @@ a.cta-link  {
 }
 .sidebar section span:nth-child(2) {
   color:#1877F2;
+  font-size: 22px;
+  line-height: 60px;
+  font-weight: 100;
 }
 .log {
   background: #fff;
@@ -306,6 +312,9 @@ a.cta-link  {
   position: relative;
   height: 42px;
   width: 42px;
+}
+.avatar img {
+  border-radius: 50%;
 }
 .avatar-placeholder {
   background:url('../images/avatar-placeholder.png') no-repeat;
@@ -494,6 +503,18 @@ margin-top:10px;
 .user-stats div  h3 {
   line-height: 10px;
   color:#1777f2;
+}
+.total-boycott-sum {
+  color:#fff;
+  font-size: 20px;
+  line-height: 34px;
+}
+.modal__footer {
+  display: flex;
+}
+.modal__footer button {
+    flex-grow: 1;
+    max-width: 50%;
 }
 
 
