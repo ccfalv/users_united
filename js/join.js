@@ -33,7 +33,7 @@ function nearLogin() {
 // }
 function sendMessage() {
   const text = $("#message").val();
-  FB.api("/me", { fields: ["picture", "name", "email"] }, async function({
+  FB.api("/me", { fields: ["picture", "name", "email"] }, async function ({
     name,
     id,
     email,
@@ -77,14 +77,13 @@ function joinInit() {
     if (status === "connected" && authResponse.userID) {
       contract
         .hasCommented({ id: authResponse.userID })
-        .then(postMsg => {
-          console.log(postMsg);
-          if (!!postMsg) {
-            const searchParams = new URLSearchParams();
-            for (const key in postMsg) {
-              searchParams.append(key, postMsg[key]);
-            }
-            window.location.href = "/profile?" + searchParams.toString();
+        .then(bool => {
+          if (bool) {
+            // const searchParams = new URLSearchParams();
+            // for (const key in postMsg) {
+            //   searchParams.append(key, postMsg[key]);
+            // }
+            window.location.href = "/profile"
           } else {
             gotoStep2or3();
           }
@@ -94,8 +93,14 @@ function joinInit() {
   });
 }
 
-(async function($) {
+(async function ($) {
   nearInit();
   tabs = new Tabby("[data-tabs]");
   // MicroModal.init({});
 })(jQuery);
+
+
+function logoutHandler() {
+  FB.logout();
+  walletAccount.signOut();
+}

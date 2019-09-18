@@ -40,8 +40,13 @@ export function getRangeMessages(start: i32 = 0): Array<VectorMessage> {
   return result;
 }
 
-export function hasCommented(id: string): PostedMessage | null {
-  return storage.get<PostedMessage>(id);
+export function hasCommented(id: string): bool {
+  return storage.contains(id);
+}
+export function getProfile(id: string): PostedMessage | null {
+  if (storage.contains(id)) {
+    return storage.get<PostedMessage>(id);
+  } return null;
 }
 
 export function monthCounter(yearMonth: string): i32 {
