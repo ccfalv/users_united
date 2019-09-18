@@ -19,7 +19,7 @@
 
 .modal__container {
   background-color: #fff;
-  max-width:560px;
+  max-width:500px;
   max-height: 100vh;
   border-radius: 4px;
   overflow-y: auto;
@@ -56,7 +56,7 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
   line-height: 1.5;
-  padding:10px 50px
+  padding:10px 40px
 }
 .modal__content p {
   color:#000;
@@ -154,9 +154,11 @@
 .micromodal-slide .modal__overlay {
   will-change: transform;
 }
-.modal__footer {
-  text-align: center;
-  padding-bottom:2rem;
+.modal__footer button {
+  margin: 0;
+  width: 50%;
+  display: inline-block;
+  float: left;
 }
 
 

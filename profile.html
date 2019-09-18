@@ -1,8 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Users United</title>
+    <meta name="description" content="Users United" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<link href="https://fonts.googleapis.com/css?family=Crete+Round|Major+Mono+Display|Roboto:700,300,100" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="css/fa.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/tabby-ui-vertical.min.css"
+    />
+
+    <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "384002515644565",
+          cookie: true,
+          xfbml: true,
+          version: "v4.0"
+        });
+
+        FB.AppEvents.logPageView();
+        joinInit();
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+  </head>
   <body>
-    <h1>profile</h1>
-    <ul></ul>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="header">
+      <div class="container">
+        <div class="row">
+         <div class="columns three">
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox">
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <ul id="menu">
+                <div class="uu-logo-mark"></div>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Info</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+              </ul>
+            </div>
+          </nav>
+          <div class="uu-logo">
+            <span><strong>USERS</strong>UNITED</span>
+          </div>
+          <div class="login-btn mobile-login-btn">
+            <a href="#"><i class="fa fa-lock"></i></a>
+          </div>
+        </div>
+        <div class="menu columns nine">
+          <span>PROFILE</span>
+          <ul class="u-pull-right">
+            <li class="login-btn">
+              <a href="#"><span>LOGOUT</span><div class="avatar"><div class="avatar-placeholder"></div></a>
+              </a>
+            </li>
+          </ul>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <div class="how-it-works">
+    <div class="container">
+      <div class="row">
+        <div class="columns twelve">
+          <h2>How it works</h2>
+        </div>     
+      </div>
+      <div class="row">
+        <div class="columns four">
+          <h5>Connect Facebook</h5>
+          <div class="steps-img"></div>
+          <p>We're only as strong as our newest member</p>
+        </div>   
+        <div class="columns four">
+          <h5>Stop using it</h5>
+          <div class="steps-img"></div>
+          <p>We're only as strong as our newest member</p>
+        </div> 
+        <div class="columns four">
+          <h5>Spread the word</h5>
+          <div class="steps-img"></div>
+          <p>We're only as strong as our newest member</p>
+        </div>   
+      </div>
+    </div>
+  </div>
+  <div class="log">
+    <div class="container">
+      <div class="row">
+        <div class="columns three sidebar">
+          <div class="sidebar-content">
+            <div class="campaign-avatar"><div class="facebook-logo"></div></div>
+            <p>We are <strong>23</strong> Users United boycotting Facebook resulting in  <strong>$123</strong> lost revenue.</p>
+            <canvas id="myChart"></canvas>
+            <section><span>Users</span></section>
+            <section><span>Users</span></section>
+            <button class="secondary-btn" onclick="location.href= `join`">Share Boycott</button>
+          </div>
+        </div>
+        <div id="connect-facebook" class="columns nine profile-container">
+          <div class="profile-content">
+            <div class="profile-header">
+              <div class="avatar"><div class="avatar-placeholder"></div></div>
+              <section>
+                <h3>Casey Falvey</h3>
+                <span class="url-address">https://facebook.com/caseyfalvey</span>
+              </section>
+            </div>
+            <section class="user-stats">
+              <div>
+                <h3>#122</h3>
+                <span>User Number</span>
+              </div>
+              <div>
+                <h3>0.013</h3>
+                <span>Days Boycotting</span>
+              </div>
+              <div>
+                <h3>$0.042</h3>
+                <span>Boycott Value</span>
+              </div>
+            </section>
+            <p>I am boycotting Facebook until they start paying me my fair share of the profits made from my data.</p>
+          </div>
+          <p>
+        </div>
+      </div>
+    </div>
+    <div class="modal micromodal-slide" id="share-modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Success!
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <p>Last year Facebook made $3.2 billion from our personal data. What did we get? A like?</p>
+          <p>Last year Facebook made $3.2 billion from our personal data. What did we get? A like?</p>
+          <p>Last year Facebook made $3.2 billion from our personal data. What did we get? A like? Last year Facebook made $3.2 billion</p>
+        </main>
+        <footer class="modal__footer">
+          <button onclick="location.href= `join`">Join Boycott</button>
+          <button class="secondary-btn">Not Now</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
     <script defer>
       const searchParams = new URLSearchParams(window.location.search);
       const lis = [];
@@ -18,5 +222,58 @@
       console.log(lis);
       lis.map(l => document.querySelector("ul").appendChild(l));
     </script>
+    <script src="js/micromodal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/tabby.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nearprotocol/nearlib@0.13.2/dist/nearlib.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/src/config.js"></script>
+    <script src="./js/near.js"></script>
+    <script src="js/app.js"></script>
+    <script src="./js/join.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+  // Initial config for setting up modals
+  MicroModal.init({
+  });
+  MicroModal.show('share-modal');
+  </script>
+    <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+            backgroundColor: 'rgba(24, 119, 242,.2)',
+            borderColor: 'rgba(24, 119, 242)',
+            data: [0, 0,50,130,700,1200],
+            pointBackgroundColor: "#000",
+            pointRadius:4,
+            lineTension:0
+                    
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+      legend: {
+          display: false,
+          fontColor: 'rgb(255, 99, 132)'
+      },
+      scales: {
+            yAxes: [{
+                ticks: {
+                    display: false,
+                    beginAtZero:true,
+                }
+            }],
+        },
+    },
+});
+  </script>
   </body>
 </html>

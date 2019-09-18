@@ -76,7 +76,9 @@ a.cta-link  {
 }
 .header span {
   line-height: 44px;
+  color:#0a0c0f;
 }
+
 .header button {
   margin-bottom: 0;
 }
@@ -84,6 +86,7 @@ a.cta-link  {
   text-align: center;
   flex: 1;
   line-height: 42px;
+  color:#0a0b0e;
 }
 .menu ul { 
   display:flex;
@@ -214,7 +217,7 @@ a.cta-link  {
   background-size: cover;
   overflow: hidden;
 }
-.signup-container {
+.profile-container {
   margin-top:42px;
   min-height: 700px;
   position: relative;
@@ -282,7 +285,7 @@ a.cta-link  {
   position: relative;
   height: 116px;
   width: 116px;
-  margin:80px auto 20px;
+  margin:70px auto 30px;
   border-radius:50%;
 }
 .avatar {
@@ -330,12 +333,15 @@ a.cta-link  {
     color:#0a0c0f;
     font-family: 'Michroma', sans-serif;
 }
-.signup-content {
+.profile-content {
   padding: 40px;
   max-width: 60%;
   overflow: hidden;
 }
-.signup-content h3 {
+.profile-content h3 {
+  color:#0a0c0f;
+}
+.step-number {
   color:#1877F2;
 }
 .signup-step-icon {
@@ -348,7 +354,7 @@ a.cta-link  {
   line-height: 40px;
 }
 
-.signup-content .em {
+.profile-content .em {
     position: absolute;
     font-size: 440px;
     opacity: .1;
@@ -357,21 +363,21 @@ a.cta-link  {
     right: -50px;
     z-index: 0;
 }
-.signup-content aside {
+.profile-content aside {
   display: block;
   padding-top:40px;
   width: 60%;
 }
-.signup-content aside span {
+.profile-content aside span {
   background: #d1e4fc;
   line-height: 28px;
   font-style: italic;
 }
-.signup-content i {
+.profile-content i {
   font-size: 12px;
   vertical-align: top;
 }
-.signup-content i {
+.profile-content i {
   color:#1877F2;
   font-size: 12px;
 }
@@ -411,9 +417,55 @@ a.cta-link  {
 .sidebar-menu .active {
   color:#fff;
 }
-.login-btn {
-
+.login-btn span {
+  margin-right: 10px;
 }
-
-
+.login-btn .avatar {
+  float: right;
+  height: 30px;
+  width: 30px;
+  margin:3px 0 0;
+}
+.login-btn .avatar-placeholder {
+  background-size:30px 30px;
+  height: 30px;
+  width: 30px;
+}
+.mobile-login-btn {
+  position: absolute;
+  display: none;
+}
+.profile-header {
+  display: inline-flex;
+  margin-bottom:30px;
+}
+.profile-header section {
+flex-grow: 2;
+margin-top:10px;
+}
+.profile-header section h3 {
+  margin-bottom: 0;
+}
+.profile-header .avatar {
+  margin:0px 20px 0 0;
+  height:86px;
+  width: 86px;
+}
+.profile-header .avatar-placeholder {
+  background-size:86px 86px;
+  height: 86px;
+  width: 86px;
+}
+.user-stats {
+  display: inline-flex;
+  width: 100%;
+  margin:20px 0 40px;
+}
+.user-stats div {
+  flex-grow: 1;
+}
+.user-stats div  h3 {
+  line-height: 10px;
+  color:#1777f2;
+}
 

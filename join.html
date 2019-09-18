@@ -78,43 +78,37 @@
     <div class="header">
       <div class="container">
         <div class="row">
-            <div class="columns three uu-logo">
-            <nav role="navigation">
-              <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-
-                <ul id="menu">
-                  <a href="#"><li>Home</li></a>
-                  <a href="#"><li>About</li></a>
-                  <a href="#"><li>Info</li></a>
-                  <a href="#"><li>Contact</li></a>
-                  <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-                </ul>
-              </div>
-            </nav>
-            <div class="uu-logo">
-              <a href="/"><strong>USERS</strong>UNITED</a>
+         <div class="columns three">
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox">
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <ul id="menu">
+                <div class="uu-logo-mark"></div>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Info</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+              </ul>
             </div>
-          </div>
-          <div class="menu columns nine">
-            <span>Facebook Boycott/Join</span>
-            <ul class="u-pull-right">
-              <li>
-                <button>Login</button>
-              </li>
-            </ul>
+          </nav>
+          <div class="uu-logo">
+            <span><strong>USERS</strong>UNITED</span>
           </div>
         </div>
         <div class="menu columns nine">
-          <span>BOYCOTT</span>
-          <ul class="u-pull-right">         
-            <li>
+          <span>#BOYCOTT<strong>FACEBOOK</strong></span>
+          <ul class="u-pull-right">
+            <li class="login-btn">
+              <a href="#"><span>Login</span><i class="fa fa-lock"></i></a>
+              </a>
             </li>
           </ul>
-        </div>
+        </div>  
       </div>
     </div>
   </div>
@@ -151,17 +145,16 @@
           <div class="sidebar-content">
             <div class="campaign-avatar"><div class="facebook-logo"></div></div>
             <h5>Join Boycott</h5>
-            <ul class="sidebar-menu" data-tabs>
+              <ul class="sidebar-menu" data-tabs>
               <li><a data-tabby-default href="#connect-facebook"><div class="signup-icon connect-step"></div> Connect <span>1</span></a></li>
               <li><a href="#connect-near"><div class="signup-icon secure-step"></div>Secure <span>2</span></i></a></li>
               <li><a href="#post-reason"><div class="signup-icon post-step"></div>Post <span>3</span></a></li>
             </ul>
-            <button class="secondary-btn">Need Help?</button>
           </div>
         </div>
-        <div id="connect-facebook" class="columns nine signup-container">
-          <div class="signup-content">
-            <span>Step One</span>
+        <div id="connect-facebook" class="columns nine profile-container">
+          <div class="profile-content">
+            <span class="step-number">Step One</span>
             <h3>Connect Your Account</h3>
             <p>To get started, simply connect your Facebook account just like you'd do with countless other apps. Instead of mining your data for profit, Users United will simple access your name, avatar and last login data to track your boycott.</p>
             <button class="secondary-btn" onclick="facebookLogin()">Log In With Facebook</button>
@@ -169,8 +162,8 @@
           </div>
           <p>
         </div>
-        <div id="connect-near" class="columns nine signup-container">
-          <div class="signup-content">
+        <div id="connect-near" class="columns nine profile-container">
+          <div class="profile-content">
             <span>Step Two</span>
             <h3>Secure Your Account</h3>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
@@ -178,8 +171,8 @@
             <aside><span><i class="fa fa-asterisk"></i> Yes, the irony of needing to connect Facebook in order boycott Facebook is not lost on us. But as Sun Tzu said, "The opportunity of defeating the enemy is provided by the enemy."</span></aside>
           </div>
         </div>
-        <div id="post-reason" class="columns nine signup-container">
-          <div class="signup-content">
+        <div id="post-reason" class="columns nine profile-container">
+          <div class="profile-content">
             <span>Step Three</span>
             <h3>Post Boycott</h3>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
@@ -200,6 +193,7 @@
         </div>
       </div>
     </div>
+    
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/micromodal.min.js"></script>
