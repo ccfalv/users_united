@@ -19,7 +19,7 @@
 
 .modal__container {
   background-color: #fff;
-  max-width:500px;
+  max-width:480px;
   max-height: 100vh;
   border-radius: 4px;
   overflow-y: auto;
