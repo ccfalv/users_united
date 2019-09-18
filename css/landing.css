@@ -164,7 +164,7 @@ a.cta-link  {
 .sidebar p {
   text-align: center;
   font-size: 22px;
-  margin:20px 40px 20px;
+  margin:20px 40px 10px;
   color:#fff;
 }
 .sidebar-menu [role=tab][aria-selected=true] {
@@ -181,10 +181,24 @@ a.cta-link  {
   border-bottom: 1px solid #2e3135;
 }
 .sidebar section {
-  width: 100%;
-  border-bottom:1px solid #2e3135;
-  display: block;
-  padding:10px 40px;
+  border-top:1px solid #2e3135;
+  display: flex;
+  padding:6px 20px;
+}
+.sidebar section span {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.sidebar section span aside {
+  font-size: 10px;
+  color:#1877F2;
+}
+.sidebar section span:nth-child(1) {
+  flex-grow: 2;
+  color:#fff;
+}
+.sidebar section span:nth-child(2) {
+  color:#1877F2;
 }
 .log {
   background: #fff;
@@ -383,10 +397,9 @@ a.cta-link  {
 }
 .uu-logo-mark {
   background:url('../images/uu-logo.png') no-repeat;
-  background-size:90px 90px;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
+  background-size:60px 60px;
+  height: 60px;
+  width: 60px;
   margin: 0 auto;
 }
 .signup-icon {
@@ -434,6 +447,20 @@ a.cta-link  {
 .mobile-login-btn {
   position: absolute;
   display: none;
+  right: 20px;
+  margin-top: 10px;
+}
+@media (max-width: 550px) {
+  .mobile-login-btn {
+    display: block;
+    color:#0a0c0f;
+  }
+}
+@media (max-width: 550px) {
+  .menu {
+    display: none;
+    line-height: 30px;
+  }
 }
 .profile-header {
   display: inline-flex;
@@ -459,7 +486,7 @@ margin-top:10px;
 .user-stats {
   display: inline-flex;
   width: 100%;
-  margin:20px 0 40px;
+  margin:30px 0 30px;
 }
 .user-stats div {
   flex-grow: 1;
@@ -468,4 +495,5 @@ margin-top:10px;
   line-height: 10px;
   color:#1777f2;
 }
+
 

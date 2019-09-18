@@ -124,7 +124,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #838D8B; }
+  color: #575e69; }
 
 
 /* Typography
@@ -170,7 +170,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height:48px;
+  height:52px;
   padding: 0 44px;
   color: #fff;
   text-align: center;
