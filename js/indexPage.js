@@ -47,8 +47,8 @@ function renderMessages(messages) {
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return acc + diffDays * 0.068;
   }, 0)
-  $("#totalUser").text(totalUser);
-  $("#totalCost").text("$" + totalCost);
+  $(".total-boycott-sum").text(totalUser);
+  $(".total-value-sum").text("$" + totalCost);
 }
 
 function monthCounters(monthCounters) {

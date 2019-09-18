@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-13245165-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-13245165-2');
+  </script>
+
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -109,9 +118,12 @@
           <div class="uu-logo">
             <span><strong>USERS</strong>UNITED</span>
           </div>
+          <div class="mobile-login-btn">
+            </span><i class="fa fa-lock"></i></span>
+          </div>
         </div>
         <div class="menu columns nine">
-          <span>BOYCOTT<strong>FACEBOOK</strong></span>
+          <span>#BOYCOTT<strong>FACEBOOK</strong></span>
           <ul class="u-pull-right">
             <li class="login-btn" id="loginBtn">
               <a href="join"><span>Login</span><i class="fa fa-lock"></i></a>
@@ -129,12 +141,12 @@
             <div class="campaign-avatar">
               <div class="facebook-logo"></div>
             </div>
-            <p>We are <strong id="totalUser">23</strong> Users United boycotting Facebook resulting in <strong
-                id="totalCost">$123</strong> lost
+            <p>We are <strong class="total-boycott-sum">23</strong> Users United boycotting Facebook resulting in <strong
+                class="total-value-sum">$123</strong> lost
               revenue.</p>
             <canvas id="myChart"></canvas>
-            <section><span>Users</span></section>
-            <section><span>Users</span></section>
+            <section><span><aside>TOTAL</aside>USERS</span><span class="total-boycott-sum">23</span></section>
+            <section><span><aside>TOTAL</aside>VALUE</span><span class="total-value-sum">$123.00</span></section>
             <button onclick="location.href= `join`" id="joinBtn">Join Boycott</button>
           </div>
         </div>
@@ -163,16 +175,15 @@
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
         <header class="modal__header">
           <h2 class="modal__title" id="modal-1-title">
-            We demand<br>
-            more
+            Enough,<br>
+            Zuck
           </h2>
           <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
         <main class="modal__content" id="modal-1-content">
-          <p>Facebook makes billions every year from our personal data. What did we get?</p>
-          <p>A platform riddled with targeted ads, propaganda, misinformation with no privacy or transparency.</p>
-          <p>We demand
-            <p>What do you demand?</p>
+          <p>Facebook makes billions every year from our personal data. What do we get?</p>
+          <p>A like? Disinformation campaigns? Misuse of our personal data? Another rant from Uncle Joe?</p>
+          <p>We demand more for using Facebook.</p>
         </main>
         <footer class="modal__footer">
           <button onclick="location.href= `join`">Join Boycott</button>

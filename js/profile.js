@@ -1,5 +1,10 @@
+let lastIndex = 0;
 (async function () {
   await nearInit();
+  window.contract
+    .getRangeMessages({ start: lastIndex })
+    .then(renderMessages)
+    .catch(console.error);
   const theMonth = new Date();
   const months = [];
   for (let i = 0; i < 6; i++) {
@@ -115,4 +120,18 @@ function changeLogoutBtn(m) {
   <p>I am boycotting Facebook until they start paying me my fair share of the profits made from my data.</p>
 </div>
 `
+}
+
+function renderMessages(messages) {
+  console.log(messages);
+  const totalUser = messages.length;
+  const totalCost = messages.reduce((acc, cur) => {
+    const logDate = new Date(cur.date);
+    const nowDate = new Date();
+    const diffTime = Math.abs(nowDate.getTime() - logDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return acc + diffDays * 0.068;
+  }, 0)
+  $(".total-boycott-sum").text(totalUser);
+  $(".total-value-sum").text("$" + totalCost);
 }
