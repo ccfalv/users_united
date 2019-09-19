@@ -243,11 +243,17 @@ a.cta-link  {
 .log .ledger {
   min-height: 700px;
   margin-top:46px;
+  margin-bottom:0px;
   position: relative;
   float: right;
   background:url('../images/zuck-light.png') no-repeat;
   background-size: cover;
   overflow: hidden;
+}
+@media (max-width: 550px) {
+  .log .ledger { 
+    margin-bottom:50px;
+  }
 }
 .profile-container {
   margin-top:42px;
