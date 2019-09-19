@@ -1,4 +1,5 @@
 let lastIndex = 0;
+let profile = null, messages = null;
 (async function () {
   await nearInit();
 })(jQuery);
@@ -50,7 +51,6 @@ function monthCounters(monthCounters) {
 }
 
 function facebookInit() {
-  let profile = null, messages = null;
   function changeLogoutBtn(m) {
     profile = m;
     // console.log(profile);
@@ -77,7 +77,7 @@ function facebookInit() {
   function renderProfile() {
     const { hash } = window.location;
     const userIndex = Number(hash.substring(1));
-    console.log(messages, profile, hash, userIndex);
+    // console.log(messages, profile, hash, userIndex);
     if (userIndex > 0 && userIndex <= messages.length) {
       const realIndex = userIndex - 1;
       console.log(realIndex);
@@ -92,18 +92,7 @@ function facebookInit() {
       contract
         .getProfile({ id: authResponse.userID })
         .then(changeLogoutBtn)
-        .catch(() => {
-          location.href = "join";
-        });
-    } else {
-      // location.href = "join";
-      const id = "10162300482295717"
-      contract
-        .getProfile({ id })
-        .then(changeLogoutBtn)
-        .catch(() => {
-          location.href = "join";
-        });
+        .catch();
     }
 
     window.contract
@@ -181,4 +170,17 @@ function generateUserPage(m, i) {
     <p>I am boycotting Facebook until ${m.text}</p>
   </div>
   `
+}
+
+function onhashchangeHandler() {
+  const { hash } = window.location;
+  const userIndex = Number(hash.substring(1));
+  // console.log(messages, profile, hash, userIndex);
+  if (userIndex > 0 && userIndex <= messages.length) {
+    const realIndex = userIndex - 1;
+    console.log(realIndex);
+    $("#profile").html(generateUserPage(messages[realIndex], realIndex));
+  } else {
+    $("#profile").html(generateUserPage(profile));
+  }
 }
