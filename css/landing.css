@@ -431,10 +431,9 @@ a.cta-link  {
 }
 .signup-icon {
   background:url('../images/signup-icons.png') no-repeat;
-  background-size: 64px 40px;
-  height: 20px;
-  width: 20px;
-  display: none;
+  background-size:191px 120px;
+  height: 60px;
+  width: 60px;
 }
 .connect-step {
   background-position: 0px 0;
