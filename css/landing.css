@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 
 h1 {
   font-size: 80px;
@@ -13,6 +16,7 @@ p {
 }
 button {
   background: #1877F2;
+  font-size: 12px;
 }
 button:hover {
   opacity: .8;
@@ -27,6 +31,11 @@ button:hover {
 button.secondary-btn {
   background:#0a0c0f;
   color:#fff;
+}
+@media (min-width: 550px) {
+  button {
+  font-size:16px;
+  }
 }
 .logo {
   background: #eee;
@@ -202,11 +211,11 @@ a.cta-link  {
 .sidebar section span:nth-child(1) {
   flex-grow: 2;
   color:#fff;
+  line-height:16px;
 }
 .sidebar section span:nth-child(2) {
   color:#1877F2;
   font-size: 22px;
-  line-height: 60px;
   font-weight: 100;
 }
 .log {
@@ -234,11 +243,17 @@ a.cta-link  {
 .log .ledger {
   min-height: 700px;
   margin-top:46px;
+  margin-bottom:0px;
   position: relative;
   float: right;
   background:url('../images/zuck-light.png') no-repeat;
   background-size: cover;
   overflow: hidden;
+}
+@media (max-width: 550px) {
+  .log .ledger { 
+    margin-bottom:50px;
+  }
 }
 .profile-container {
   margin-top:42px;
@@ -416,10 +431,9 @@ a.cta-link  {
 }
 .signup-icon {
   background:url('../images/signup-icons.png') no-repeat;
-  background-size: 64px 40px;
-  height: 20px;
-  width: 20px;
-  display: none;
+  background-size:191px 120px;
+  height: 60px;
+  width: 60px;
 }
 .connect-step {
   background-position: 0px 0;
