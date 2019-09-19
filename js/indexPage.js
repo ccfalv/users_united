@@ -1,4 +1,8 @@
 let lastIndex = 0;
+const MS_IN_ONE_DAY = 24 * 60 * 60 * 1000;
+const MS_IN_ONE_WEEK = 7 * 24 * 60 * 60 * 1000;
+const EARNING_PER_SECOND = .068 / 24 / 60 / 60;
+const ROUNDING = 1000000;
 (async function () {
   await nearInit();
   // console.log(window.contract);
@@ -26,29 +30,50 @@ function renderMessages(messages) {
     const logDate = new Date(m.date);
     const nowDate = new Date();
     const diffTime = Math.abs(nowDate.getTime() - logDate.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffSecond = Math.ceil(diffTime / 1000);
+    const diffDays = Math.ceil(diffTime / MS_IN_ONE_DAY);
+    runTimer(diffSecond, index);
     return `
 <tr>
   <td><div class="avatar"><img src="${m.photo}" alt="img" /></div></td>
   <td><span><label class="user-num">#${index}</label>${m.name} is boycotting Facebook until ${m.text}</span></td>
   <td><span class="u-pull-right"><label class="user-num">${diffDays}</label>Days</span></td>
-  <td><span class="u-pull-right"><label class="user-sum">$${Math.round(diffDays * 68) / 1000}</label>Boycott Value</span></td>
+  <td><span class="u-pull-right"><label class="user-sum" id="earning-${index}">$${Math.round(diffSecond * EARNING_PER_SECOND * 1000) / 1000}</label>Boycott Value</span></td>
 </tr>`;
   });
   $("#near-tbody").html(tr);
+
   if (messages.length) {
     lastIndex = Number(messages[messages.length - 1].index) + 1;
   }
   const totalUser = messages.length;
-  const totalCost = messages.reduce((acc, cur) => {
+  const totalSec = messages.reduce((acc, cur) => {
     const logDate = new Date(cur.date);
     const nowDate = new Date();
     const diffTime = Math.abs(nowDate.getTime() - logDate.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return acc + diffDays * 0.068;
+    const diffDays = Math.ceil(diffTime / MS_IN_ONE_DAY);
+    const diffSecond = Math.ceil(diffTime / 1000);
+    return acc + diffSecond;
   }, 0)
+  const timeNow = new Date().getTime();
+
+  const last24hours = messages.filter(m => (timeNow - new Date(m.date).getTime() <= MS_IN_ONE_DAY))
+  const last7days = messages.filter(m => (timeNow - new Date(m.date).getTime() <= MS_IN_ONE_WEEK))
   $(".total-boycott-sum").text(totalUser);
-  $(".total-value-sum").text("$" + totalCost);
+  $(".total-value-sum").text("$" + Math.round((totalSec * EARNING_PER_SECOND * ROUNDING) / ROUNDING));
+  $("#last24hours").text(last24hours.length);
+  $("#last7days").text(last7days.length);
+  runTimer(totalSec, "total", totalUser);
+}
+
+function runTimer(diffSecond, index, count = 1) {
+  let addSec = 0;
+  setInterval(() => {
+    addSec = addSec + count;
+    const earn = Math.round((diffSecond + addSec) * EARNING_PER_SECOND * ROUNDING) / ROUNDING;
+    $("#earning-" + index).text("$" + earn);
+    // console.log(addSec);
+  }, 1000)
 }
 
 function monthCounters(monthCounters) {
@@ -129,4 +154,5 @@ function changeLogoutBtn() {
 function logoutHandler() {
   FB.logout();
   walletAccount.signOut();
+  location.reload();
 }
