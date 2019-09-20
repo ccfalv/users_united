@@ -380,6 +380,11 @@ a.cta-link  {
   max-width: 60%
   }
 }
+@media (min-width: 550px) {
+  .profile-content aside {
+  max-width: 60%
+  }
+}
 .profile-content h3 {
   color:#0a0c0f;
 }
@@ -408,7 +413,11 @@ a.cta-link  {
 .profile-content aside {
   display: block;
   padding-top:40px;
-  width: 60%;
+}
+@media (min-width: 550px) {
+  .profile-content aside {
+  max-width: 60%
+  }
 }
 .profile-content aside span {
   line-height: 28px;
