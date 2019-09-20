@@ -72,3 +72,7 @@ export function monthCounters(yearMonth6: string): Array<i32> {
   return months.map<i32>((m: string, i) => storage.getPrimitive<i32>(m, 0))
   // return res;
 }
+
+export function vPop(): VectorMessage {
+  return messages.pop();
+}

@@ -1,4 +1,9 @@
-let tabs;
+
+(async function ($) {
+  nearInit();
+  tabs = new Tabby("[data-tabs]");
+  // MicroModal.init({});
+})(jQuery);
 
 function facebookLogin() {
   try {
@@ -91,16 +96,4 @@ function joinInit() {
         .catch(gotoStep2or3);
     }
   });
-}
-
-(async function ($) {
-  nearInit();
-  tabs = new Tabby("[data-tabs]");
-  // MicroModal.init({});
-})(jQuery);
-
-
-function logoutHandler() {
-  FB.logout();
-  walletAccount.signOut();
 }

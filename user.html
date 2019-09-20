@@ -136,15 +136,19 @@
             <div class="campaign-avatar">
               <div class="facebook-logo"></div>
             </div>
-            <p>We are <strong>23</strong> Users United boycotting Facebook resulting in <strong>$123</strong> lost
+            <p>We are <strong class="total-boycott-sum">23</strong> Users United boycotting Facebook resulting in
+              <strong class="total-value-sum" id="earning-total">$123</strong> lost
               revenue.</p>
             <canvas id="myChart"></canvas>
             <section><span>
-                <aside>TOTAL</aside>USERS
-              </span><span class="total-boycott-sum">23</span></section>
+                <aside>LAST</aside>24 HOURS
+              </span><span class="total-boycott-sum" id="last24hours">23</span></section>
             <section><span>
-                <aside>TOTAL</aside>VALUE
-              </span><span class="total-value-sum">$123.00</span></section>
+                <aside>LAST</aside>7 DAYS
+              </span><span class="total-boycott-sum" id="last7days">23</span></section>
+            <section><span>
+                <aside>LAST</aside>30 DAYS
+              </span><span class="total-boycott-sum" id="last30days">23</span></section>
             <button class="secondary-btn" onclick="fbShare()">Share Boycott</button>
           </div>
         </div>
@@ -161,6 +165,7 @@
     <!-- <script src="js/app.js"></script> -->
     <script src="/js/user.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/js/common.js"></script>
 
     <script>
       window.fbAsyncInit = function () {
