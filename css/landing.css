@@ -431,6 +431,7 @@ a.cta-link  {
   background-size:191px 120px;
   height: 60px;
   width: 60px;
+  display: none;
 }
 .connect-step {
   background-position: 0px 0;
