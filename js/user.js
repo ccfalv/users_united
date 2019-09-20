@@ -19,7 +19,8 @@ function facebookInit() {
 
 function generateUserPage(m, i) {
   if (m === null) {
-    // window.location.replace("/");
+    m = messages[0];
+    m.index = 1;
   }
   if (m.index === undefined) {
     m.index = i;
@@ -73,6 +74,7 @@ function onhashchangeHandler() {
 }
 
 function renderMessages() {
+  userCounters();
   const { hash } = window.location;
   const userIndex = Number(hash.substring(1));
   // console.log(messages, profile, hash, userIndex);

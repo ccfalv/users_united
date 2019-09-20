@@ -4,6 +4,7 @@
 })(jQuery);
 
 function renderMessages() {
+  userCounters();
   const tr = messages.map((m, i) => {
     const index = i + lastIndex + 1;
     const logDate = new Date(m.date);
@@ -22,8 +23,6 @@ function renderMessages() {
   });
   $("#near-tbody").html(tr);
 }
-
-
 
 function facebookInit() {
   FB.getLoginStatus(({ status, authResponse }) => {
