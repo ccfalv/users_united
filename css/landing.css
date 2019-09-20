@@ -373,8 +373,12 @@ a.cta-link  {
 }
 .profile-content {
   padding: 40px;
-  max-width: 60%;
   overflow: hidden;
+}
+@media (min-width: 550px) {
+  .profile-content {
+  max-width: 60%
+  }
 }
 .profile-content h3 {
   color:#0a0c0f;
@@ -431,7 +435,6 @@ a.cta-link  {
   background-size:191px 120px;
   height: 60px;
   width: 60px;
-  display: none;
 }
 .connect-step {
   background-position: 0px 0;
