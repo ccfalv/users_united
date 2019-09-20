@@ -36,7 +36,7 @@ function renderMessages(messages) {
     return `
 <tr>
   <td><div class="avatar"><img src="${m.photo}" alt="img" /></div></td>
-  <td><span><label class="user-num">#${index}</label>${m.name} is boycotting Facebook until ${m.text}</span></td>
+  <td><span><a class="user-num" href="/profile#${index}">#${index}</a>${m.name} is boycotting Facebook until ${m.text}</span></td>
   <td><span class="u-pull-right"><label class="user-num">${diffDays}</label>Days</span></td>
   <td><span class="u-pull-right"><label class="user-sum" id="earning-${index}">$${Math.round(diffSecond * EARNING_PER_SECOND * 1000) / 1000}</label>Boycott Value</span></td>
 </tr>`;
@@ -152,7 +152,6 @@ function changeLogoutBtn() {
 }
 
 function logoutHandler() {
-  FB.logout();
   walletAccount.signOut();
-  location.reload();
+  FB.logout(() => window.location.reload());
 }

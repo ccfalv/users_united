@@ -134,6 +134,9 @@ function fbShare() {
 
 
 function generateUserPage(m, i) {
+  if (m === null) {
+    window.location.replace("/");
+  }
   if (m.index === undefined) {
     m.index = i;
   }
@@ -183,4 +186,10 @@ function onhashchangeHandler() {
   } else {
     $("#profile").html(generateUserPage(profile));
   }
+}
+
+function logoutHandler(event) {
+  event.preventDefault();
+  walletAccount.signOut();
+  FB.logout(() => window.location.replace("/"));
 }
