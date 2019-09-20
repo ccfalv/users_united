@@ -19,10 +19,7 @@ const ROUNDING = 1000000;
     .getRangeMessages({ start: lastIndex })
     .then(m => {
       messages = m;
-      if (messages.length) {
-        lastIndex = Number(messages[messages.length - 1].index) + 1;
-      }
-      renderMessages();
+      renderMessages(m);
     })
     .catch(console.error);
 })(jQuery);
@@ -98,8 +95,8 @@ function monthCounters(monthCounters) {
 
 
 function changeLogoutBtn() {
-  $("#loginBtn").html(`<a href="#" onClick="logoutHandler()"><span>Logout</span><i class="fa fa-lock"></i></a>`)
-  $("#fbAvatar").html(`<img src="${m.photo}" alt="img" style="width:inherit" />`)
+  $("#loginBtn").html(`<a href="#" onClick="logoutHandler(event)"><span>Logout</span><i class="fa fa-lock"></i></a>`)
+  $("#fbAvatar").html(`<img src="${profile.photo}" alt="img" style="width:inherit" />`)
 }
 
 
@@ -121,13 +118,11 @@ function runTimer(diffSecond, index, count = 1) {
   }, 1000)
 }
 
-
-
 function fbShare() {
   FB.ui({
     method: 'share',
     href: 'https://usersunited.org',
-    quote: `good`
+    quote: `I'm boycotting facebook because...`
   }, function (response) {
     console.log(response);
   });

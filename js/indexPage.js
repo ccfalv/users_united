@@ -4,6 +4,7 @@
 })(jQuery);
 
 function renderMessages() {
+  userCounters();
   const tr = messages.map((m, i) => {
     const index = i + lastIndex + 1;
     const logDate = new Date(m.date);
@@ -23,26 +24,20 @@ function renderMessages() {
   $("#near-tbody").html(tr);
 }
 
-
-
 function facebookInit() {
   FB.getLoginStatus(({ status, authResponse }) => {
     if (status === "connected" && authResponse.userID) {
       contract
-        .hasCommented({ id: authResponse.userID })
-        .then(bool => {
-          if (bool) {
-            changeLogoutBtn();
-            $("#joinBtn").attr("onClick", `location.href = "user"`);
-            $("#joinBtn").text("Your Boycott");
-          } else {
-            MicroModal.show('intro-modal');
-            changeLogoutBtn();
-          }
+        .getProfile({ id: authResponse.userID })
+        .then((p) => {
+          profile = p;
+          changeLogoutBtn();
+          $("#joinBtn").attr("onClick", `location.href = "user"`);
+          $("#joinBtn").text("Your Boycott");
+          changeLogoutBtn();
         })
         .catch(() => {
           MicroModal.show('intro-modal');
-          changeLogoutBtn();
         });
     } else {
       MicroModal.show('intro-modal');
