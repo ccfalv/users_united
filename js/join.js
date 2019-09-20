@@ -83,7 +83,7 @@ function joinInit() {
             // for (const key in postMsg) {
             //   searchParams.append(key, postMsg[key]);
             // }
-            window.location.href = "/profile"
+            window.location.href = "/user"
           } else {
             gotoStep2or3();
           }

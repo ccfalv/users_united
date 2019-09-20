@@ -36,7 +36,7 @@ function renderMessages(messages) {
     return `
 <tr>
   <td><div class="avatar"><img src="${m.photo}" alt="img" /></div></td>
-  <td><span><a class="user-num" href="/profile#${index}">#${index}</a>${m.name} is boycotting Facebook until ${m.text}</span></td>
+  <td><span><a class="user-num" href="/user#${index}">#${index}</a>${m.name} is boycotting Facebook until ${m.text}</span></td>
   <td><span class="u-pull-right"><label class="user-num">${diffDays}</label>Days</span></td>
   <td><span class="u-pull-right"><label class="user-sum" id="earning-${index}">$${Math.round(diffSecond * EARNING_PER_SECOND * 1000) / 1000}</label>Boycott Value</span></td>
 </tr>`;
@@ -130,7 +130,7 @@ function facebookInit() {
         .then(bool => {
           if (bool) {
             changeLogoutBtn();
-            $("#joinBtn").attr("onClick", `location.href = "profile"`);
+            $("#joinBtn").attr("onClick", `location.href = "user"`);
             $("#joinBtn").text("My Profile");
           } else {
             MicroModal.show('intro-modal');
