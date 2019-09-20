@@ -131,7 +131,7 @@ function facebookInit() {
           if (bool) {
             changeLogoutBtn();
             $("#joinBtn").attr("onClick", `location.href = "user"`);
-            $("#joinBtn").text("My Profile");
+            $("#joinBtn").text("Your Boycott");
           } else {
             MicroModal.show('intro-modal');
             changeLogoutBtn();
