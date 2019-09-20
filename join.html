@@ -138,9 +138,11 @@
               <div class="facebook-logo"></div>
             </div>
             <h5>Join Boycott</h5>
+
+            <canvas id="myChart"></canvas>
             <ul class="sidebar-menu" data-tabs>
               <li><a data-tabby-default href="#connect-facebook">
-                   Connect <span>1</span>
+                  Connect <span>1</span>
                 </a></li>
               <li><a href="#connect-near">
                   Secure <span>2</span></i>
@@ -155,10 +157,13 @@
           <div class="profile-content">
             <span class="step-number">Step One</span>
             <h3>Connect Your Account</h3>
-            <p>Connect your Facebook account just like you would with any other app. However, instead of mining your data, Users United will only  access your name, avatar and last login to track your boycott.</p>
+            <p>Connect your Facebook account just like you would with any other app. However, instead of mining your
+              data, Users United will only access your name, avatar and last login to track your boycott.</p>
             <button class="secondary-btn" onclick="facebookLogin()">Log In With Facebook</button>
-            <aside><span><i class="fa fa-asterisk"></i>Yes, the irony of needing to connect Facebook in order boycott Facebook is not lost on us. But
-                as Sun Tzu said, "The opportunity of defeating the enemy is provided by the enemy." ¯\_(ツ)_/¯</span></aside>
+            <aside><span><i class="fa fa-asterisk"></i>Yes, the irony of needing to connect Facebook in order boycott
+                Facebook is not lost on us. But
+                as Sun Tzu said, "The opportunity of defeating the enemy is provided by the enemy." ¯\_(ツ)_/¯</span>
+            </aside>
           </div>
           <p>
         </div>
@@ -166,22 +171,28 @@
           <div class="profile-content">
             <span>Step Two</span>
             <h3>Secure Your Account</h3>
-            <p>The future of the web is decentralized. You boycott (and any data associated with it) is stored on a censorship and tamper resistent blockchain powered by the NEAR Protocol, To continue, you'll need to create a username and verify your phone number.</p>
+            <p>The future of the web is decentralized. You boycott (and any data associated with it) is stored on a
+              censorship and tamper resistent blockchain powered by the NEAR Protocol, To continue, you'll need to
+              create a username and verify your phone number.</p>
             <button class="secondary-btn" onclick="nearLogin()">Secure Your Account</button>
-            <aside><span><i class="fa fa-asterisk"></i>NEAR is a sharded, developer-friendly, proof-of-stake public blockchain.<a href="#">Learn more</a></span></aside>
+            <aside><span><i class="fa fa-asterisk"></i>NEAR is a sharded, developer-friendly, proof-of-stake public
+                blockchain.<a href="#">Learn more</a></span></aside>
           </div>
         </div>
         <div id="post-reason" class="columns nine profile-container">
           <div class="profile-content">
             <span>Step Three</span>
             <h3>Post Your Boycott</h3>
-            <p>What are your reasons for boycotting Facebook? Tired of the lack of privacy, disinformation, fake news, your uncle's rants? There's no end, really, so be sure to tell Zuck why you're boycotting Facebook. </p>
+            <p>What are your reasons for boycotting Facebook? Tired of the lack of privacy, disinformation, fake news,
+              your uncle's rants? There's no end, really, so be sure to tell Zuck why you're boycotting Facebook. </p>
             <input class="u-full-width" type="text" maxlength="50" id="message" autofocus
               placeholder="I am boycotting facebook because..." style="flex: 1;"
               onkeyup="event.keyCode === 13 && sendMessage()" />
             <!-- <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea> -->
             <button class="secondary-btn" onclick="sendMessage()">Post Boycott</button>
-            <aside><span><i class="fa fa-asterisk"></i>Your message will be formatted as <strong>{Your Name}</strong> is boycotting Facebook because <strong>{your reason}. Surely there is a better way of handling this, but for now it works (fingers crossed).</span></aside>
+            <aside><span><i class="fa fa-asterisk"></i>Your message will be formatted as <strong>{Your Name}</strong> is
+                boycotting Facebook because <strong>{your reason}. Surely there is a better way of handling this, but
+                  for now it works (fingers crossed).</span></aside>
           </div>
         </div>
       </div>
@@ -197,7 +208,8 @@
     <script src="/src/config.js"></script>
     <script src="/js/near.js"></script>
     <script src="/js/join.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/js/common.js"></script>
     <script>
       window.fbAsyncInit = function () {
         FB.init({
