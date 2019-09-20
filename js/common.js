@@ -95,8 +95,8 @@ function monthCounters(monthCounters) {
 
 
 function changeLogoutBtn() {
-  $("#loginBtn").html(`<a href="#" onClick="logoutHandler(event)"><span>Logout</span><i class="fa fa-lock"></i></a>`)
-  $("#fbAvatar").html(`<img src="${profile.photo}" alt="img" style="width:inherit" />`)
+  $("#loginBtn").html(`<a href="#" onClick="logoutHandler(event)"><span>Logout</span><i class="fa fa-lock"></i></a>`);
+  $("#fbAvatar").html(`<img src="${profile.photo}" alt="img" style="width:inherit" />`);
 }
 
 
