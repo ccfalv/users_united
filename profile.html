@@ -44,31 +44,6 @@
   <!-- <link rel="manifest" href="/site.webmanifest" /> -->
   <link rel="icon" type="image/png" href="/images/favicon.png" />
 
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: "384002515644565",
-        cookie: true,
-        xfbml: true,
-        version: "v4.0"
-      });
-
-      FB.AppEvents.logPageView();
-      facebookInit();
-    };
-
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {
-        return;
-      }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  </script>
 </head>
 
 <body onhashchange="onhashchangeHandler()">
@@ -186,6 +161,32 @@
     <!-- <script src="js/app.js"></script> -->
     <script src="/js/profile.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "384002515644565",
+          cookie: true,
+          xfbml: true,
+          version: "v4.0"
+        });
+
+        FB.AppEvents.logPageView();
+        facebookInit();
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 </body>
 
 </html>

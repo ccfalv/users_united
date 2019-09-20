@@ -30,7 +30,8 @@
   <meta name="twitter:url" content="https://usersunited.org">
   <meta name="twitter:creator" content="@usersunitedhq">
   <meta name="twitter:title" content="Join the Facebook Boycott">
-  <meta name="twitter:description" content="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.">
+  <meta name="twitter:description"
+    content="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.">
   <meta name="twitter:image" content="https://usersunited.org/images/zuck-with-copy.png">
 
   <!-- FONT
@@ -54,31 +55,6 @@
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: "384002515644565",
-        cookie: true,
-        xfbml: true,
-        version: "v4.0"
-      });
-
-      FB.AppEvents.logPageView();
-      facebookInit();
-    };
-
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {
-        return;
-      }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  </script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -158,7 +134,7 @@
             <section><span>
                 <aside>LAST</aside>24 HOURS
               </span><span class="total-boycott-sum" id="last24hours">23</span></section>
-              <section><span>
+            <section><span>
                 <aside>LAST</aside>7 DAYS
               </span><span class="total-boycott-sum" id="last7days">23</span></section>
             <button onclick="location.href= `join`" id="joinBtn">Join Boycott</button>
@@ -216,7 +192,31 @@
   <script src="/js/app.js"></script>
   <script src="/js/indexPage.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: "384002515644565",
+        cookie: true,
+        xfbml: true,
+        version: "v4.0"
+      });
 
+      FB.AppEvents.logPageView();
+      facebookInit();
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

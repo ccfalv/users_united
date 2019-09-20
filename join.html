@@ -44,31 +44,6 @@
   <!-- <link rel="manifest" href="/site.webmanifest" /> -->
   <link rel="icon" type="image/png" href="/images/favicon.png" />
 
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: "384002515644565",
-        cookie: true,
-        xfbml: true,
-        version: "v4.0"
-      });
-
-      FB.AppEvents.logPageView();
-      joinInit();
-    };
-
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {
-        return;
-      }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  </script>
 </head>
 
 <body>
@@ -159,7 +134,8 @@
               <div class="facebook-logo"></div>
             </div>
             <h5>How it works</h5>
-            <p>pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.</p>
+            <p>pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise
+              design elements over content.</p>
             <ul class="sidebar-menu" data-tabs>
               <li><a data-tabby-default href="#connect-facebook">
                   <div class="signup-icon connect-step"></div> Connect <span>1</span>
@@ -169,7 +145,7 @@
                 </a></li>
               <li><a href="#post-reason">
                   <div class="signup-icon post-step"></div>Post <span>3</span>
-              </a></li>
+                </a></li>
             </ul>
           </div>
         </div>
@@ -227,6 +203,32 @@
     <script src="/src/config.js"></script>
     <script src="/js/near.js"></script>
     <script src="/js/join.js"></script>
+
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "384002515644565",
+          cookie: true,
+          xfbml: true,
+          version: "v4.0"
+        });
+
+        FB.AppEvents.logPageView();
+        joinInit();
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 </body>
 
 </html>
