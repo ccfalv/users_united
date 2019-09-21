@@ -465,8 +465,8 @@ a.cta-link  {
 .sidebar-menu .active {
   color:#fff;
 }
-.login-btn span {
-  margin-right: 10px;
+.menu-btn span {
+  margin-right: 8px;
 }
 .login-btn .avatar {
   float: right;
