@@ -50,7 +50,8 @@ function sendMessage() {
     contract
       .addMessage({ text, id, name, email, photo, date })
       .then(res => {
-        window.location.href = "/";
+        alert("posting success! now you will be redirected to see your post!")
+        window.location.replace("/");
       })
       .catch(window.alert);
   });
