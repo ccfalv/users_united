@@ -2,6 +2,7 @@
 (async function ($) {
   nearInit();
   tabs = new Tabby("[data-tabs]");
+  console.log(tabs);
   // MicroModal.init({});
 })(jQuery);
 
@@ -96,4 +97,9 @@ function joinInit() {
         .catch(gotoStep2or3);
     }
   });
+}
+
+
+function renderMessages() {
+  console.log(messages);
 }
