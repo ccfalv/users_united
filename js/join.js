@@ -1,4 +1,4 @@
-
+let tabs;
 (async function ($) {
   nearInit();
   tabs = new Tabby("[data-tabs]");
