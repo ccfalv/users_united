@@ -1,7 +1,8 @@
-
+let tabs;
 (async function ($) {
   nearInit();
   tabs = new Tabby("[data-tabs]");
+  console.log(tabs);
   // MicroModal.init({});
 })(jQuery);
 
@@ -49,7 +50,8 @@ function sendMessage() {
     contract
       .addMessage({ text, id, name, email, photo, date })
       .then(res => {
-        window.location.href = "/";
+        alert("posting success! now you will be redirected to see your post!")
+        window.location.replace("/");
       })
       .catch(window.alert);
   });
@@ -96,4 +98,9 @@ function joinInit() {
         .catch(gotoStep2or3);
     }
   });
+}
+
+
+function renderMessages() {
+  console.log(messages);
 }

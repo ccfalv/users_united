@@ -1,4 +1,4 @@
-let profile = null, messages = null, lastIndex = 0, tabs;
+let profile = null, messages = null, lastIndex = 0;
 const MS_IN_ONE_DAY = 24 * 60 * 60 * 1000;
 const MS_IN_ONE_WEEK = 7 * 24 * 60 * 60 * 1000;
 const MS_IN_30_DAYS = 30 * 24 * 60 * 60 * 1000;
