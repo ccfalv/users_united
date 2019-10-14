@@ -21,7 +21,7 @@ button {
 button:hover {
   opacity: .8;
 }
-.sidebar button {
+button.sidebar-btn {
   width: inherit;
   position: fixed;
   bottom: 0;
@@ -542,5 +542,11 @@ margin-top:10px;
     flex-grow: 1;
     max-width: 50%;
 }
-
+#menu p {
+  font-size: 16px;
+  color:#cfced6;
+}
+#menu p a {
+  color:#1877F2;
+}
 
