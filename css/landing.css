@@ -28,10 +28,6 @@ button.sidebar-btn {
   margin-bottom: 0;
   z-index: 101;
 }
-button.secondary-btn {
-  background:#0a0c0f;
-  color:#fff;
-}
 @media (min-width: 550px) {
   button {
   font-size:16px;

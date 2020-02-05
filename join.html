@@ -24,14 +24,14 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- <link rel="stylesheet" href="css/main.css" /> -->
-  <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="/css/skeleton.css" />
-  <link rel="stylesheet" type="text/css" href="/css/landing.css" />
-  <link rel="stylesheet" type="text/css" href="/css/fa.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/modal.css" />
-  <link rel="stylesheet" type="text/css" href="/css/menu.css" />
-  <link rel="stylesheet" type="text/css" href="/css/all.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/tabby-ui-vertical.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" href="css/landing.css" />
+  <link rel="stylesheet" type="text/css" href="css/fa.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/modal.css" />
+  <link rel="stylesheet" type="text/css" href="css/menu.css" />
+  <link rel="stylesheet" type="text/css" href="css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/tabby-ui-vertical.min.css" />
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -141,22 +141,32 @@
 
             <canvas id="myChart"></canvas>
             <ul class="sidebar-menu" data-tabs>
-              <li><a data-tabby-default href="#connect-facebook">
-                  Connect <span>1</span>
+              <li><a data-tabby-default href="#connect-near">
+                  Create <span>1</span>
                 </a></li>
               <li><a href="#connect-near">
-                  Secure <span>2</span></i>
+                  Connect <span>2</span></i>
                 </a></li>
               <li><a href="#post-reason">
-                  Post <span>3</span>
+                  Verify <span>3</span>
                 </a></li>
             </ul>
           </div>
         </div>
+        <div id="connect-near" class="columns nine profile-container">
+          <div class="profile-content">
+            <span><i class="fa fa-bolt"></i></span>
+            <h3>Create Account</h3>
+            <p>We're using blockchain technology to host user account data. We believe the future of the web is a decentralized ecosystem where everyone controls and owns their own data.</p>
+            <button class="secondary-btn" onclick="nearLogin()">Create Account</button>
+            <aside><span><i class="fa fa-asterisk"></i>NEAR is a sharded, developer-friendly, proof-of-stake public
+                blockchain.<a href="#">Learn more</a></span></aside>
+          </div>
+        </div>
         <div id="connect-facebook" class="columns nine profile-container">
           <div class="profile-content">
-            <span class="step-number">Step One</span>
-            <h3>Connect Your Account</h3>
+            <span class="step-number">Step Two</span>
+            <h3>Connect Facebook</h3>
             <p>Connect your Facebook account just like you would with any other app. However, instead of mining your
               data, Users United will only access your name, avatar and last login to track your boycott.</p>
             <button class="secondary-btn" onclick="facebookLogin()">Log In With Facebook</button>
@@ -167,22 +177,10 @@
           </div>
           <p>
         </div>
-        <div id="connect-near" class="columns nine profile-container">
-          <div class="profile-content">
-            <span>Step Two</span>
-            <h3>Secure Your Account</h3>
-            <p>The future of the web is decentralized. You boycott (and any data associated with it) is stored on a
-              censorship and tamper resistent blockchain powered by the NEAR Protocol, To continue, you'll need to
-              create a username and verify your phone number.</p>
-            <button class="secondary-btn" onclick="nearLogin()">Secure Your Account</button>
-            <aside><span><i class="fa fa-asterisk"></i>NEAR is a sharded, developer-friendly, proof-of-stake public
-                blockchain.<a href="#">Learn more</a></span></aside>
-          </div>
-        </div>
         <div id="post-reason" class="columns nine profile-container">
           <div class="profile-content">
             <span>Step Three</span>
-            <h3>Post Your Boycott</h3>
+            <h3>Verify Boycoot</h3>
             <p>What are your reasons for boycotting Facebook? Tired of the lack of privacy, disinformation, fake news,
               your uncle's rants? There's no end, really, so be sure to tell Zuck why you're boycotting Facebook. </p>
             <input class="u-full-width" type="text" maxlength="50" id="message" autofocus
